@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs><clipPath id="sq"><rect x="112" y="112" width="800" height="800" rx="180"></rect></clipPath></defs>
+  <g clip-path="url(#sq)">
+    <rect x="112" y="112" width="800" height="800" fill="#E02128"></rect>
+    <polygon points="404,912 912,404 912,912" fill="#0B8A44"></polygon>
+  </g>
+</svg>

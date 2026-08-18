@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TaifaHealth logo preview</title>
+<link rel="icon" href="svg/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F4F2EE; font-family: "Google Sans", "Google Sans Flex", ui-sans-serif, system-ui, sans-serif; }
+  a { color: #0B8A44; } a:hover { color: #E02128; }
+
+  .page  { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 48px; padding: 64px; }
+  .row   { display: flex; gap: 48px; }
+  .sizes { display: flex; align-items: flex-end; gap: 32px; }
+  .col   { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+  .group { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+  .cards { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+  .card  { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .stage { position: relative; width: 220px; height: 220px; }
+  .stage img { position: absolute; inset: 0; width: 100%; }
+  .h     { font-size: 15px; font-weight: 600; color: #3A3A3A; }
+  .cap   { font-size: 13px; color: #6B6B6B; }
+  .sub   { font-size: 12px; color: #9A9A9A; }
+  .taifa  { color: #1E1E1E; }
+  .health { color: #0B8A44; }
+
+  /* Mark transition: capsule (A) to cross (B), 6s loop. */
+  @keyframes showA {0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+  @keyframes showB {0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
+  @keyframes rotA  {0%,40%{transform:rotate(0deg);opacity:1}50%,90%{transform:rotate(90deg);opacity:0}100%{transform:rotate(0deg);opacity:1}}
+  @keyframes rotB  {0%,40%{transform:rotate(-90deg);opacity:0}50%,90%{transform:rotate(0deg);opacity:1}100%{transform:rotate(-90deg);opacity:0}}
+  @keyframes flipA {0%,44%{transform:rotateY(0deg);opacity:1}46%,89%{opacity:0}50%,90%{transform:rotateY(180deg)}100%{transform:rotateY(360deg);opacity:1}}
+  @keyframes flipB {0%,44%{transform:rotateY(-180deg);opacity:0}46%,89%{opacity:1}50%,90%{transform:rotateY(0deg)}94%{opacity:0}100%{transform:rotateY(180deg);opacity:0}}
+  @keyframes popA  {0%,40%{transform:scale(1);opacity:1}50%,90%{transform:scale(0);opacity:0}100%{transform:scale(1);opacity:1}}
+  @keyframes popB  {0%,40%{transform:scale(0);opacity:0}52%{transform:scale(1.08);opacity:1}56%,90%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
+
+  .show-a { animation: showA 6s ease-in-out infinite; }
+  .show-b { animation: showB 6s ease-in-out infinite; }
+  .rot-a  { animation: rotA  6s ease-in-out infinite; }
+  .rot-b  { animation: rotB  6s ease-in-out infinite; }
+  .flip-a { animation: flipA 6s ease-in-out infinite; }
+  .flip-b { animation: flipB 6s ease-in-out infinite; }
+  .pop-a  { animation: popA  6s ease-in-out infinite; }
+  .pop-b  { animation: popB  6s ease-in-out infinite; }
+  .persp  { perspective: 800px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stage img { animation: none; }
+    .show-b, .rot-b, .flip-b, .pop-b { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="row">
+    <img src="svg/logo-code.svg" alt="Logo with code glyph" style="width: 420px; height: 420px;">
+    <img src="svg/logo.svg" alt="Logo" style="width: 420px; height: 420px;">
+  </div>
+
+  <div class="sizes">
+    <img src="svg/logo.svg" alt="" style="width: 128px; height: 128px;">
+    <img src="svg/logo.svg" alt="" style="width: 64px; height: 64px;">
+    <img src="svg/logo.svg" alt="" style="width: 32px; height: 32px;">
+    <img src="svg/logo.svg" alt="" style="width: 16px; height: 16px;">
+  </div>
+
+  <div class="col">
+    <img src="svg/logo-plus.svg" alt="Plus logo" style="width: 420px; height: 420px;">
+    <div class="sizes">
+      <img src="svg/logo-plus.svg" alt="" style="width: 128px; height: 128px;">
+      <img src="svg/logo-plus.svg" alt="" style="width: 64px; height: 64px;">
+      <img src="svg/logo-plus.svg" alt="" style="width: 32px; height: 32px;">
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="h">Transition variants: logo 1 to logo 2</div>
+    <div class="cards">
+      <div class="card">
+        <div class="stage">
+          <img src="svg/bg.svg" alt="">
+          <img src="svg/pill-capsule.svg" alt="" class="show-a">
+          <img src="svg/pill-cross.svg" alt="" class="show-b">
+        </div>
+        <div class="cap">Crossfade</div>
+      </div>
+      <div class="card">
+        <div class="stage">
+          <img src="svg/bg.svg" alt="">
+          <img src="svg/pill-capsule.svg" alt="" class="rot-a">
+          <img src="svg/pill-cross.svg" alt="" class="rot-b">
+        </div>
+        <div class="cap">Rotate</div>
+      </div>
+      <div class="card">
+        <div class="stage persp">
+          <img src="svg/bg.svg" alt="">
+          <img src="svg/pill-capsule.svg" alt="" class="flip-a">
+          <img src="svg/pill-cross.svg" alt="" class="flip-b">
+        </div>
+        <div class="cap">Flip</div>
+      </div>
+      <div class="card">
+        <div class="stage">
+          <img src="svg/bg.svg" alt="">
+          <img src="svg/pill-capsule.svg" alt="" class="pop-a">
+          <img src="svg/pill-cross.svg" alt="" class="pop-b">
+        </div>
+        <div class="cap">Pop</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="h">Self-contained animated SVGs (svg/animated/, safe to use as plain &lt;img&gt;)</div>
+    <div class="cards">
+      <div class="card">
+        <img src="svg/animated/logo-crossfade.svg" alt="Animated logo, crossfade" style="width: 220px; height: 220px;">
+        <div class="cap">logo-crossfade.svg</div>
+      </div>
+      <div class="card">
+        <img src="svg/animated/logo-rotate.svg" alt="Animated logo, rotate" style="width: 220px; height: 220px;">
+        <div class="cap">logo-rotate.svg</div>
+      </div>
+      <div class="card">
+        <img src="svg/animated/logo-flip.svg" alt="Animated logo, flip" style="width: 220px; height: 220px;">
+        <div class="cap">logo-flip.svg</div>
+      </div>
+      <div class="card">
+        <img src="svg/animated/logo-pop.svg" alt="Animated logo, pop" style="width: 220px; height: 220px;">
+        <div class="cap">logo-pop.svg</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="h">TaifaHealth lockups &amp; variants</div>
+    <div style="display: flex; gap: 56px; align-items: center; flex-wrap: wrap; justify-content: center;">
+      <div class="card">
+        <img src="svg/pill-capsule-outline.svg" alt="Capsule mark" style="width: 160px; height: 160px;">
+        <div class="sub">Mark, no square</div>
+      </div>
+      <div class="card">
+        <img src="svg/pill-cross-outline.svg" alt="Cross mark green outline" style="width: 160px; height: 160px;">
+        <div class="sub">Cross mark, green outline</div>
+      </div>
+      <div class="card">
+        <img src="svg/pill-cross-outline-blue.svg" alt="Cross mark blue outline" style="width: 160px; height: 160px;">
+        <div class="sub">Cross mark, blue outline</div>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 4px;">
+        <img src="svg/pill-cross-outline.svg" alt="" style="width: 96px; height: 96px;">
+        <div style="font-size: 44px; font-weight: 700; letter-spacing: -0.5px;"><span class="taifa">Taifa</span><span class="health">Health</span></div>
+      </div>
+      <div class="sub">Horizontal lockup</div>
+    </div>
+    <div style="display: flex; gap: 72px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+      <div class="card">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <img src="svg/pill-cross-outline.svg" alt="" style="width: 130px; height: 130px;">
+          <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.3px;"><span class="taifa">Taifa</span><span class="health">Health</span></div>
+        </div>
+        <div class="sub">Stacked lockup</div>
+      </div>
+      <div class="card">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <img src="svg/logo-plus.svg" alt="" style="width: 64px; height: 64px;">
+          <div style="font-size: 32px; font-weight: 600; letter-spacing: -0.3px;"><span class="taifa">Taifa</span><span class="health">Health</span></div>
+        </div>
+        <div class="sub">App-icon lockup</div>
+      </div>
+      <div class="card">
+        <div style="font-size: 40px; font-weight: 700; letter-spacing: -0.5px;"><span style="color: #E02128;">Taifa</span><span class="health">Health</span></div>
+        <div class="sub">Wordmark only</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cap">logo.svg &middot; logo-plus.svg: geometric rebuilds, true capsules</div>
+</div>
+</body>
+</html>

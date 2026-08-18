@@ -22,7 +22,7 @@ for the boundary, not an internal storage model.
 
 | Standard | Where |
 |---|---|
-| **ICD-11** | Diagnoses and morbidity reporting, with an ICD-10 mapping retained because claims and legacy reporting still expect it |
+| **ICD-10** | Diagnoses: the KPS IG binds Condition.code Required to full ICD-10, so it is the primary diagnosis coding today. ICD-11 is kept as a forward mapping for when the national bindings move |
 | **SNOMED CT** | Clinical findings, procedures, and problem list where precision matters beyond ICD |
 | **LOINC** | Laboratory and observation codes, including vitals |
 | **ATC and the Kenya Essential Medicines List (KEML)** | Formulary, prescribing, and procurement |
@@ -33,23 +33,38 @@ alone. A free-text diagnosis is not reportable and cannot be claimed.
 
 ## Kenyan national systems
 
+Verified against DHA/SHA sources and the IG continuous builds in August
+2026. Primary government sites are often unreachable or gated, so re-verify
+each interface directly during onboarding before treating it as a build
+requirement.
+
 | System | What it is | How we integrate |
 |---|---|---|
-| **SHA** (Social Health Authority) | The national insurer under the Social Health Insurance Act 2023, replacing NHIF. Covers the primary health care fund, the social health insurance fund, and the emergency and chronic illness fund | Eligibility check at registration, benefit and preauthorisation rules at the point of order, claim submission and reconciliation from `taifa-revenue` |
-| **KHIS** | The national DHIS2 instance for aggregate reporting | Scheduled aggregate submission of the MOH reporting set, derived from clinical data rather than typed in a second time |
-| **KMHFL** | Kenya Master Health Facility List | Facility identity. Our `Facility` carries its KMHFL code, and reporting is keyed on it |
-| **Client and provider registries** | National identity for patients and practitioners under the health information exchange | Master patient index reconciliation, practitioner verification |
+| **Kenya Core FHIR IG** | The foundational profile and terminology layer (v1.0.0, published by SHA, canonical `fhir.sha.go.ke`). Every other Kenyan IG depends on it | Pinned as the base package in `taifa-interop`; our profiles derive from it |
+| **Kenya Patient Summary IG** | DHA's IPS-adapted summary document (draft 0.1.0) | Produced and consumed by `taifa-emr`, see docs/SOFTWARE.md |
+| **Kenya eClaims FHIR IG** | Claim, ClaimResponse, Coverage, and preauthorization profiles for SHA billing (draft 0.1.0, DHA) | Claims pipeline in `taifa-revenue` emits it via `taifa-interop` |
+| **Kenya Emergency Care IG** | Pre-hospital EMS exchange, dispatch to ED handover (draft 0.1.0, DHA) | `taifa-ems`, plus handover intake on the EMR |
+| **SHA** (Social Health Authority) | National insurer under the Social Health Insurance Act 2023. Provider portal at `portal.sha.go.ke`; since mid-2026 claims for Level 4+ public hospitals reportedly route through the government "Taifa Care HMIS" with DHA approval gates | Eligibility at registration, preauthorisation at point of order, eClaims submission and reconciliation from `taifa-revenue` |
+| **Kenya HIE / AfyaLink** | DHA's FHIR-based exchange (OpenHIE lineage, OpenHIM mediators historically). Developer onboarding via AfyaLink: sandbox, API testing, security review, production; OAuth 2.0 / JWT | `taifa-interop` is our single connection point |
+| **Client Registry** | National master patient index issuing the Unique Patient Identifier (UPI/NUPI), `cr.kenya-hie.health` | UPI resolution at registration; our MPI reconciles against it |
+| **Health Facility Registry (KMHFR)** | Successor of KMHFL, `kmhfr.health.go.ke`, with community units | Facility identity; our `Facility` carries its code and reporting is keyed on it |
+| **Health Worker Registry** | Practitioner identity, `hwr.dha.go.ke` | Practitioner verification on onboarding |
+| **National SHR and Terminology Service** | Shared health record aggregating facility data; terminology service for SNOMED CT, ICD-10, LOINC | KPS submission target; terminology validation source for coded fields |
+| **KHIS** | The national DHIS2 instance (`hiskenya.org`) for aggregate reporting | Scheduled aggregate submission (DHIS2 Web API / ADX, not FHIR) derived from clinical data |
+| **DHA certification** | Under the Digital Health Act 2023 and draft Data Exchange Regulations 2025, only DHA-certified systems may connect to the national exchange (CIHIS ESB). Certification portal covers EMR, HIS, lab, pharmacy, diagnostics | A release-blocking track for `taifa-emr` and siblings: certification is scheduled work, not an afterthought |
 | **M-Pesa (Daraja)** | Payments | STK push, C2B and B2C reconciliation against invoices |
 
 The intent of the Digital Health Act 2023 is a national health information
 exchange that facilities feed rather than duplicate. We build toward being a
-compliant node in it: canonical identifiers, FHIR out, and no data trapped in a
-proprietary schema.
+compliant, certified node in it: canonical identifiers, FHIR out, and no
+data trapped in a proprietary schema.
 
 ## Reporting
 
 Facility reporting is a **projection of the clinical record**, never a separate
-data entry exercise. If a report cannot be derived from the record, the record
+data entry exercise. The concrete MOH 700-series forms (MOH 705 outpatient
+summary, MOH 717 workload, MOH 731 HIV, and the rest of the facility set)
+are derived views submitted to KHIS over the DHIS2 Web API. If a report cannot be derived from the record, the record
 is missing something, and that is the bug to fix. Registers, MOH tally sheets,
 and county dashboards are all views over the same data.
 

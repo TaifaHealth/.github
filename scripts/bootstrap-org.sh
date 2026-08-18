@@ -40,6 +40,7 @@ REPOS=(
   "taifa-lab|Laboratory information system: specimens, analyzers, results"
   "taifa-radiology|Radiology information system: worklists, reporting, DICOM and PACS"
   "taifa-revenue|Billing, insurance, SHA claims, payments and reconciliation"
+  "taifa-ems|Emergency medical services: dispatch console, responder app, ED handover"
   "taifa-interop|FHIR R4 facade, HL7 v2 interfaces, DHIS2 and national registry integration"
   "taifa-portal|Patient portal: appointments, results, visit history, consent"
   "taifa-health-design|Shared design system and Svelte component library"

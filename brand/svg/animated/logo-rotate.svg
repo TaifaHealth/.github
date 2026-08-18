@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <style>
+    @keyframes th-roA {0%,40%{transform:rotate(0deg);opacity:1}50%,90%{transform:rotate(90deg);opacity:0}100%{transform:rotate(0deg);opacity:1}}
+    @keyframes th-roB {0%,40%{transform:rotate(-90deg);opacity:0}50%,90%{transform:rotate(0deg);opacity:1}100%{transform:rotate(-90deg);opacity:0}}
+    .th-ro-a, .th-ro-b {
+      transform-box: view-box;
+      transform-origin: center;
+      animation: 6s ease-in-out infinite;
+    }
+    .th-ro-a { animation-name: th-roA; }
+    .th-ro-b { animation-name: th-roB; }
+    @media (prefers-reduced-motion: reduce) {
+      .th-ro-a, .th-ro-b { animation: none; }
+      .th-ro-b { opacity: 0; }
+    }
+  </style>
+  <defs>
+    <clipPath id="th-ro-sq"><rect x="112" y="112" width="800" height="800" rx="180"/></clipPath>
+    <clipPath id="th-ro-pill"><rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)"/></clipPath>
+    <clipPath id="th-ro-pv"><rect x="422" y="212" width="180" height="600" rx="90"/></clipPath>
+    <clipPath id="th-ro-ph"><rect x="212" y="422" width="600" height="180" rx="90"/></clipPath>
+  </defs>
+  <g clip-path="url(#th-ro-sq)">
+    <rect x="112" y="112" width="800" height="800" fill="#E02128"/>
+    <polygon points="404,912 912,404 912,912" fill="#0B8A44"/>
+  </g>
+  <g class="th-ro-a">
+    <rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)" fill="none" stroke="#FFFFFF" stroke-width="40"/>
+    <g clip-path="url(#th-ro-pill)">
+      <rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)" fill="#FFFFFF"/>
+      <rect x="192" y="382" width="320" height="260" transform="rotate(-45 512 512)" fill="#0B8A44"/>
+      <path d="M 344 704 Q 302 662 310 606" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g class="th-ro-b">
+    <rect x="212" y="422" width="600" height="180" rx="90" fill="none" stroke="#FFFFFF" stroke-width="40"/>
+    <g clip-path="url(#th-ro-ph)">
+      <rect x="212" y="422" width="300" height="180" fill="#0B8A44"/>
+      <rect x="512" y="422" width="300" height="180" fill="#FFFFFF"/>
+    </g>
+    <rect x="422" y="212" width="180" height="600" rx="90" fill="none" stroke="#FFFFFF" stroke-width="40"/>
+    <g clip-path="url(#th-ro-pv)">
+      <rect x="422" y="212" width="180" height="390" fill="#FFFFFF"/>
+      <rect x="422" y="622" width="180" height="190" fill="#1565C0"/>
+      <path d="M 462 748 Q 442 708 446 652" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

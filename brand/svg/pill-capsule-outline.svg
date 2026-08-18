@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="pill"><rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)"></rect></clipPath>
+  </defs>
+  
+  <rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)" fill="none" stroke="#0B8A44" stroke-width="28"></rect>
+  <g clip-path="url(#pill)">
+    <rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)" fill="#FFFFFF"></rect>
+    <rect x="192" y="382" width="320" height="260" transform="rotate(-45 512 512)" fill="#0B8A44"></rect>
+    <path d="M 344 704 Q 302 662 310 606" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"></path>
+  </g>
+</svg>

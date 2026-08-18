@@ -37,7 +37,9 @@ should be able to run many facilities on one deployment.
 | **Patient access** | Appointment booking, results and visit history, consent management |
 
 Details in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and
-[docs/STANDARDS.md](docs/STANDARDS.md).
+[docs/STANDARDS.md](docs/STANDARDS.md). The full catalogue with difficulty
+ratings, IG conformance obligations, and build order is
+[docs/SOFTWARE.md](docs/SOFTWARE.md).
 
 ## Repositories
 
@@ -54,6 +56,7 @@ what belongs in each.
 | `taifa-pharmacy` | Dispensing, stock, formulary |
 | `taifa-lab` | Laboratory information system |
 | `taifa-radiology` | Radiology information system and imaging |
+| `taifa-ems` | Emergency medical services: dispatch, ambulance, ED handover (Kenya Emergency Care IG) |
 | `taifa-revenue` | Billing, insurance, SHA claims, payments |
 | `taifa-interop` | FHIR facade, HL7 v2, DHIS2 and national registries |
 | `taifa-portal` | Patient-facing portal |

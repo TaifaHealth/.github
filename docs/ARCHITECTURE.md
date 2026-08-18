@@ -68,7 +68,7 @@ terminology table in [../CONTRIBUTING.md](../CONTRIBUTING.md).
 | **Facility** | A KMHFL-coded facility. The tenancy boundary for every query |
 | **Encounter** | A contact between patient and facility: outpatient visit, admission, theatre, or a telephone consultation |
 | **Observation** | Anything measured or observed: vitals, lab results, clinical findings. LOINC coded where a code exists |
-| **Condition** | A diagnosis or problem, ICD-11 coded, with an ICD-10 mapping kept for claims |
+| **Condition** | A diagnosis or problem, ICD-10 coded (the national IG binding), with an ICD-11 forward mapping |
 | **Order** | A request for something to be done: lab, imaging, medication, procedure. Has a lifecycle and an owner |
 | **MedicationRequest / Dispense** | Prescribing is separate from dispensing, always |
 | **Invoice / Claim** | Money, derived from clinical events, never the other way round |

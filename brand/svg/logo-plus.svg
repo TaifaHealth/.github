@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="sq"><rect x="112" y="112" width="800" height="800" rx="180"></rect></clipPath>
+    <clipPath id="pv"><rect x="422" y="212" width="180" height="600" rx="90"></rect></clipPath>
+    <clipPath id="ph"><rect x="212" y="422" width="600" height="180" rx="90"></rect></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect x="112" y="112" width="800" height="800" fill="#E02128"></rect>
+    <polygon points="404,912 912,404 912,912" fill="#0B8A44"></polygon>
+  </g>
+  <rect x="212" y="422" width="600" height="180" rx="90" fill="none" stroke="#FFFFFF" stroke-width="40"></rect>
+  <g clip-path="url(#ph)">
+    <rect x="212" y="422" width="300" height="180" fill="#0B8A44"></rect>
+    <rect x="512" y="422" width="300" height="180" fill="#FFFFFF"></rect>
+  </g>
+  <rect x="422" y="212" width="180" height="600" rx="90" fill="none" stroke="#FFFFFF" stroke-width="40"></rect>
+  <g clip-path="url(#pv)">
+    <rect x="422" y="212" width="180" height="390" fill="#FFFFFF"></rect>
+    <rect x="422" y="622" width="180" height="190" fill="#1565C0"></rect>
+    <path d="M 462 748 Q 442 708 446 652" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round"></path>
+  </g>
+
+</svg>

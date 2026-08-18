@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="sq"><rect x="112" y="112" width="800" height="800" rx="180"></rect></clipPath>
+    <clipPath id="pill"><rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)"></rect></clipPath>
+  </defs>
+  <g clip-path="url(#sq)">
+    <rect x="112" y="112" width="800" height="800" fill="#E02128"></rect>
+    <polygon points="404,912 912,404 912,912" fill="#0B8A44"></polygon>
+  </g>
+  <rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)" fill="none" stroke="#FFFFFF" stroke-width="40"></rect>
+  <g clip-path="url(#pill)">
+    <rect x="192" y="382" width="640" height="260" rx="130" transform="rotate(-45 512 512)" fill="#FFFFFF"></rect>
+    <rect x="192" y="382" width="320" height="260" transform="rotate(-45 512 512)" fill="#0B8A44"></rect>
+    <path d="M 344 704 Q 302 662 310 606" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"></path>
+  </g>
+</svg>

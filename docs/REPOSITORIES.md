@@ -12,6 +12,7 @@ with the standard settings.
 | `taifa-pharmacy` | API and pharmacy web app | Stock, Batch, Dispense, Formulary | `taifa-emr` |
 | `taifa-lab` | API, lab web app, analyzer bridge | Specimen, LabOrder, Result | `taifa-emr` |
 | `taifa-radiology` | API, reporting app, DICOM bridge | Study, Report, worklist | `taifa-emr` |
+| `taifa-ems` | Dispatch console, responder mobile app, handover service | Incident, ambulance encounters, responder units, handover Composition | `taifa-interop`, `taifa-emr` |
 | `taifa-revenue` | API and finance web app | Charge, Invoice, Payment, Claim, Coverage | `taifa-emr`, `taifa-interop` |
 | `taifa-interop` | FHIR facade and integration workers | Terminology sets, mappings, outbound message log | Nothing internal |
 | `taifa-portal` | Patient web app | Consent, portal identity | `taifa-emr`, `taifa-hmis` |

@@ -31,16 +31,53 @@ mission hospitals, and county health departments.
 
 ## Brand
 
-Kenyan flag palette, shared with the rest of the Taifa platform:
+Assets, palette, and logo animations live in `brand/` (see `brand/README.md`,
+open `brand/preview.html` for a rendered view). TaifaHealth has its own
+palette, brighter than the Taifa Mail flag palette:
 
-- Black: `#050100` (text, dark surfaces, dark-theme background)
-- Red: `#860000` (danger, secondary emphasis)
-- Green: `#006900` (primary accent, brightened to `#1ea94e` in dark theme)
-- Ink on the green accent is always white
-- Warnings use neutral amber tokens, never brand colours
-- Clinical severity colours are separate from brand colours and are never
-  reused for decoration. Critical results and alerts own red
-- Fonts: Google Sans (UI), JetBrains Mono (code, identifiers, dosages)
+- Brand red `#E02128` (icon field, red wordmark variant)
+- Brand green `#0B8A44` (icon diagonal, capsule, "Health" in wordmarks, links)
+- Brand blue `#1565C0` (cross-mark pill tip only, never text or UI accents)
+- Ink `#1E1E1E`, canvas `#F4F2EE`, text greys `#3A3A3A` / `#6B6B6B` / `#9A9A9A`
+- Wordmark: "Taifa" in ink (or red), "Health" always green, weight 700,
+  tight letter-spacing
+- Clinical severity colours stay separate from brand colours. Critical
+  results and alerts own red in the UI; the brand red is for the mark
+- Fonts: Google Sans (UI, wordmarks), JetBrains Mono (code, identifiers,
+  dosages)
+- Logo motion: the capsule mark swaps into the cross mark on a 6s
+  ease-in-out loop (crossfade, rotate, flip, pop variants). Self-contained
+  animated SVGs in `brand/svg/animated/`, keyframes in `brand/README.md`.
+  Pick one variant per surface, never two side by side
+
+## Frontend style (house rules, shared with TaifaSupport)
+
+The house style is deliberately copied across Taifa products so they look
+like one team built them. TaifaSupport (`../taifa-support`) is the
+reference implementation.
+
+- **Tailwind v4, CSS-only config**: no `tailwind.config.js`. Design tokens
+  live in one `@theme` block in `app.css`
+- **Tailwind utilities for layout, inline `style=` with `var(--color-*)`
+  for colour**, so colours cannot be silently dropped by arbitrary-value
+  extraction
+- **Icons: local Iconsax pack only, two-tone variant by default**, vendored
+  under `frontend/src/lib/icons/` behind an `Icon.svelte` wrapper. Never
+  add lucide or another icon library, it would look like a different team
+- **Radius ramp, three steps**: 6px (chips, tiles), 8px (buttons, inputs,
+  menus), 14px (cards, modals). A child inside a rounded parent takes a
+  strictly smaller radius, and nothing is rounder than the card
+- **Shadows are layered** (contact + close + mid + wide soft), never a
+  single hard drop shadow
+- **Motion tokens**: 100ms press, 140ms hover, 220ms panels,
+  ease-out `cubic-bezier(.2,.7,.2,1)` for entrances; loops use ease-in-out.
+  Every animated node carries `data-anim`, and one global
+  `prefers-reduced-motion` rule kills them all
+- **Focus rings are ink-coloured**, never the accent, so keyboard focus
+  survives any accent colour
+- **Theme**: light default, dark via `[data-theme="dark"]` set by a
+  pre-paint script. A brand mark keeps its colours in both themes
+- Reuse the UI primitives directory before writing a new component
 
 ## Stack
 
