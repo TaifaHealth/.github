@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue or suspected patient data breach
+    url: https://github.com/TaifaHealth/.github/blob/main/SECURITY.md
+    about: Never report these publicly. Follow the private disclosure process.
+  - name: A facility is down or patient care is affected
+    url: https://github.com/TaifaHealth/.github/blob/main/SUPPORT.md
+    about: Use the emergency support line in your service agreement, not GitHub.
+  - name: Question about the platform or an integration
+    url: https://github.com/orgs/TaifaHealth/discussions
+    about: Ask in discussions rather than opening an issue.
