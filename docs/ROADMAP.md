@@ -6,16 +6,31 @@ useful.
 
 ## Phase 1: the record
 
+Status as of August 2026: delivered except where noted. The live
+capability ledger is `taifa-emr/docs/CAPABILITIES.md`, which is the
+honest record; this file is the plan.
+
 The minimum that replaces the registration book and the paper file.
 
-- Patient registration, master patient index, deduplication
-- Facility and user management, roles, first-party authentication, audit trail
-- Outpatient encounter: triage, vitals, consultation notes, diagnosis (ICD-11)
-- Prescribing, and dispensing against the prescription
-- Lab and radiology ordering, results back onto the encounter
-- Cash billing, invoicing, receipting, M-Pesa
+- Patient registration, master patient index, deduplication: done, with
+  age or date of birth entry and UPI resolution
+- Facility and user management, roles, first-party authentication, audit
+  trail: done, plus invitations with accept links and email, team
+  management, and email verification
+- Outpatient encounter: triage, vitals, consultation notes, diagnosis
+  (ICD-10 per the national binding): done
+- Prescribing, and dispensing against the prescription: prescribing done,
+  formulary-backed prescribing and allergy checking in sprint C3
+- Lab ordering and results back onto the encounter: sprint C2. Radiology
+  is phase 2
+- Cash billing, invoicing, receipting, M-Pesa: not started, moved to
+  phase 3 with the rest of revenue
 - The deployment story: `docker compose` on a facility server, encrypted
-  backups, restore tested
+  backups, restore tested: sprint O1
+- Beyond the original plan and already delivered: appointments and a
+  scheduling calendar, patient flow assignment with handoffs, the care
+  timeline with waiting times, in-app and email notifications with a
+  live stream, the reportable disease register, and KPS FHIR export
 
 Exit criterion: one facility runs its outpatient department on it for a month
 without paper.
