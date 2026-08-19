@@ -1,0 +1,1296 @@
+{
+  "index-version" : 2,
+  "files" : [{
+    "filename" : "ImplementationGuide-ke.fhir.eclaims.json",
+    "resourceType" : "ImplementationGuide",
+    "id" : "ke.fhir.eclaims",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ImplementationGuide/ke.fhir.eclaims",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "CodeSystem-ClaimDiagnosisCodeableConceptCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ClaimDiagnosisCodeableConceptCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/ClaimDiagnosisCodeableConceptCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ExclusionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ExclusionCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/ExclusionCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaBodySiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaBodySiteCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/KenyaBodySiteCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSocialHealthAuthorityInterventionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSocialHealthAuthorityInterventionCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/KenyaSocialHealthAuthorityInterventionCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSubSiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSubSiteCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/KenyaSubSiteCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-PreAuthExclusionsCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "PreAuthExclusionsCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/PreAuthExclusionsCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-WaiverTypeCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "WaiverTypeCS",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/WaiverTypeCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-address-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "address-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/address-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administration-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administration-method-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/administration-method-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administrative-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administrative-gender-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/administrative-gender-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-as-needed-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "as-needed-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/as-needed-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-attachment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "attachment-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/attachment-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-civil-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "civil-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/civil-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-care-team-role-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-care-team-role-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-care-team-role-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-expiry-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-expiry-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-expiry-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-state-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-state-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-state-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-subtype-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-subtype-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-subtype-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/claim-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-category-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/condition-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-clinical-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-clinical-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/condition-clinical-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-severity-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-severity-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/condition-severity-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-verification-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-verification-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/condition-verification-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-system-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-system-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/contact-point-system-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/contact-point-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-class-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-class-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/coverage-class-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-member-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-member-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/coverage-member-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-plan-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-plan-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/coverage-plan-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/coverage-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dosage-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dosage-additional-instruction-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/dosage-additional-instruction-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-eclaims-diagnostic-report-codes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "eclaims-diagnostic-report-codes-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/eclaims-diagnostic-report-codes-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-eclaims-generic-products-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "eclaims-generic-products-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/eclaims-generic-products-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-eclaims-provider-qualification-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "eclaims-provider-qualification-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/eclaims-provider-qualification-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-eepisode-of-care-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "eepisode-of-care-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/eepisode-of-care-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-encounter-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "encounter-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/encounter-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/episode-of-care-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "gender-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/gender-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-icd11-codes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "icd11-codes-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/icd11-codes-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-types-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/identifier-types-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-identifier-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/identifier-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-status-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/medication-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-name-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "name-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/name-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-method-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/payment-method-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-related-claim-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "related-claim-relationship-cs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/CodeSystem/related-claim-relationship-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "StructureDefinition-eclaim-expiry-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaim-expiry-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaim-expiry-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaim-state-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaim-state-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaim-state-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-anaesthesia-type.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-anaesthesia-type",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-anaesthesia-type",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-annual-limit-category-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-annual-limit-category-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-annual-limit-category-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-attachment-type.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-attachment-type",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-attachment-type",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-carcinoma-staging.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-carcinoma-staging",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-carcinoma-staging",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-chief-complaint.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-chief-complaint",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-chief-complaint",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-clinical-indications.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-clinical-indications",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-clinical-indications",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-consultation-amount.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-consultation-amount",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-consultation-amount",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-cost-per-session.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-cost-per-session",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-cost-per-session",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-exclusion-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-exclusion-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-exclusion-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-eye-examination-amount.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-eye-examination-amount",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-eye-examination-amount",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-frame-amount.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-frame-amount",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-frame-amount",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-has-coinsurance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-has-coinsurance",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-has-coinsurance",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-hpi.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-hpi",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-hpi",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-investigations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-investigations",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-investigations",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-item-coverage-reference.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-item-coverage-reference",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-item-coverage-reference",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-last-replacement-date.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-last-replacement-date",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-last-replacement-date",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-lens-amount.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-lens-amount",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-lens-amount",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-lens-prescription.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-lens-prescription",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-lens-prescription",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-member-status-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-member-status-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-member-status-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-metastases.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-metastases",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-metastases",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-other-metastases.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-other-metastases",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-other-metastases",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-patient-invoice.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-patient-invoice",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-patient-invoice",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-payment-method-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-payment-method-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-payment-method-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-physical-examination.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-physical-examination",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-physical-examination",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-plan-type-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-plan-type-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-plan-type-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-pre-auth-exclusion-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-pre-auth-exclusion-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-pre-auth-exclusion-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-preauth-token.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-preauth-token",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-preauth-token",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-provider-auth-token.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-provider-auth-token",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-provider-auth-token",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-raw-preauth-source-data.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-raw-preauth-source-data",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-raw-preauth-source-data",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-reason-for-service.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-reason-for-service",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-reason-for-service",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-replacement.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-replacement",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-replacement",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-session-expected-date.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-session-expected-date",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-session-expected-date",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-treatment-setting.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-treatment-setting",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-treatment-setting",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-vital-signs.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-vital-signs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-vital-signs",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-eclaims-waiver-type-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "eclaims-waiver-type-extension",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/eclaims-waiver-type-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-claim.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-claim",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-claim",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-claimbase.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-claimbase",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-claimbase",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-claimresponse.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-claimresponse",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-claimresponse",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "ClaimResponse",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-claimsubmission.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-claimsubmission",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-claimsubmission",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-condition.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-condition",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-condition",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Condition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-coverage.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-coverage",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-coverage",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Coverage",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-diagnosticreport.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-diagnosticreport",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-diagnosticreport",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "DiagnosticReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-encounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-encounter",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-encounter",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Encounter",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-episodeofcare.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-episodeofcare",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-episodeofcare",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "EpisodeOfCare",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-imagingpreauth.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-imagingpreauth",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-imagingpreauth",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-medicationdispense.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-medicationdispense",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-medicationdispense",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "MedicationDispense",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-medicationrequest.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-medicationrequest",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-medicationrequest",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "MedicationRequest",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-medicationstatement.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-medicationstatement",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-medicationstatement",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "MedicationStatement",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-oncologypreauth.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-oncologypreauth",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-oncologypreauth",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-opticalpreauth.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-opticalpreauth",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-opticalpreauth",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-organization.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-organization",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-organization",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Organization",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-patient.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-patient",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-patient",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Patient",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-paymentnotice.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-paymentnotice",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-paymentnotice",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "PaymentNotice",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-practitioner.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-practitioner",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-practitioner",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Practitioner",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-provenance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-provenance",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-provenance",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Provenance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-renalpreauth.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-renalpreauth",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-renalpreauth",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-eclaims-surgicalpreauth.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-eclaims-surgicalpreauth",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/StructureDefinition/ke-eclaims-surgicalpreauth",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Claim",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "ValueSet-address-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "address-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/address-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-administrative-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "administrative-gender-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/administrative-gender-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-civil-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "civil-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/civil-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claims-encounter-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claims-encounter-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/claims-encounter-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-contact-point-system-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "contact-point-system-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/contact-point-system-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-contact-point-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "contact-point-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/contact-point-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaim-care-team-role-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaim-care-team-role-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaim-care-team-role-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaim-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaim-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaim-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaim-subtype-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaim-subtype-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaim-subtype-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaim-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaim-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaim-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaim-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaim-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaim-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-administration-method-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-administration-method-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-administration-method-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-as-needed-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-as-needed-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-as-needed-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-attachment-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-attachment-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-attachment-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-body-site-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-body-site-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-body-site-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-claim-diagnosis-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-claim-diagnosis-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-claim-diagnosis-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-claimresponse-adjudication-error-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-claimresponse-adjudication-error-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-claimresponse-adjudication-error-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-claimresponse-forms-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-claimresponse-forms-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-claimresponse-forms-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-claimresponse-fundsreserve-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-claimresponse-fundsreserve-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-claimresponse-fundsreserve-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-claimresponse-payeetype-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-claimresponse-payeetype-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-claimresponse-payeetype-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-condition-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-condition-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-condition-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-condition-clinical-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-condition-clinical-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-condition-clinical-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-condition-codes-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-condition-codes-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-condition-codes-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-condition-severity-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-condition-severity-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-condition-severity-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-condition-verification-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-condition-verification-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-condition-verification-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-coverage-class-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-coverage-class-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-coverage-class-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-coverage-member-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-coverage-member-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-coverage-member-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-coverage-plan-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-coverage-plan-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-coverage-plan-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-coverage-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-coverage-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-coverage-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-diagnostic-report-codes-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-diagnostic-report-codes-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-diagnostic-report-codes-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-dosage-additional-instruction-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-dosage-additional-instruction-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-dosage-additional-instruction-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-episode-of-care-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-episode-of-care-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-episode-of-care-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-episode-of-care-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-episode-of-care-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-episode-of-care-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-exclusion-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-exclusion-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-exclusion-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-generic-products-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-generic-products-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-generic-products-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-icd11-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-icd11-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-icd11-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-payment-method-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-payment-method-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-payment-method-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-pre-auth-exclusions-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-pre-auth-exclusions-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-pre-auth-exclusions-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-provider-qualification-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-provider-qualification-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-provider-qualification-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-related-claim-relationship-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-related-claim-relationship-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-related-claim-relationship-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-social-health-authority-interventions-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-social-health-authority-interventions-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-social-health-authority-interventions-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-sub-site-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-sub-site-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-sub-site-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-eclaims-waiver-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "eclaims-waiver-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/eclaims-waiver-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "gender-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/gender-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-identifier-types-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "identifier-types-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/identifier-types-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-identifier-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "identifier-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/identifier-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-status-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-status-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/medication-status-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-name-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "name-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/eclaims/ValueSet/name-use-vs",
+    "version" : "0.1.0"
+  }]
+}

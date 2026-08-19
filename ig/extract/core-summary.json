@@ -1,0 +1,5338 @@
+{
+  "ig": "core",
+  "package": {
+    "name": "kenya.fhir.core",
+    "version": "1.0.0",
+    "canonical": "https://fhir.sha.go.ke/fhir",
+    "date": "20260530045131",
+    "title": "Kenya Core FHIR Implementation Guide",
+    "fhirVersions": [
+      "4.0.1"
+    ],
+    "url": "https://build.fhir.org/ig/IntelliSOFT-Consulting/Kenya-core-FHIR-IG/",
+    "dependencies": {
+      "hl7.fhir.r4.core": "4.0.1",
+      "hl7.terminology.r4": "7.1.0",
+      "hl7.fhir.uv.extensions.r4": "5.3.0",
+      "hl7.fhir.uv.ips": "1.1.0"
+    }
+  },
+  "structureDefinitions": [
+    {
+      "id": "KenyaCoreOrganization",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization",
+      "name": "KenyaCoreOrganization",
+      "title": "KenyaCore Organization Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Organization",
+      "baseResource": "Organization",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Organization.active",
+        "Organization.id",
+        "Organization.identifier",
+        "Organization.identifier.value",
+        "Organization.meta",
+        "Organization.meta.profile",
+        "Organization.name",
+        "Organization.type"
+      ],
+      "mustSupportElements": [
+        "Organization.active",
+        "Organization.address",
+        "Organization.address.city",
+        "Organization.address.district",
+        "Organization.address.state",
+        "Organization.id",
+        "Organization.identifier",
+        "Organization.meta",
+        "Organization.name",
+        "Organization.telecom",
+        "Organization.type"
+      ],
+      "bindings": [
+        {
+          "path": "Organization.type",
+          "id": "Organization.type",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/organization-type-vs"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Organization.id",
+          "id": "Organization.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.meta",
+          "id": "Organization.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.meta.profile",
+          "id": "Organization.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/provider-organization|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/provider-organization|1.0.0"
+          }
+        },
+        {
+          "path": "Organization.extension",
+          "id": "Organization.extension",
+          "min": null,
+          "max": null,
+          "slicing": {
+            "discriminator": [
+              "value:url"
+            ],
+            "rules": "open"
+          }
+        },
+        {
+          "path": "Organization.extension",
+          "id": "Organization.extension:facilityLevel",
+          "min": 0,
+          "max": "1",
+          "sliceName": "facilityLevel",
+          "types": [
+            "Extension"
+          ],
+          "typeProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/facility-level-extension"
+          ]
+        },
+        {
+          "path": "Organization.extension",
+          "id": "Organization.extension:approvalStatus",
+          "min": 0,
+          "max": "1",
+          "sliceName": "approvalStatus",
+          "types": [
+            "Extension"
+          ],
+          "typeProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/approval-status-extension"
+          ]
+        },
+        {
+          "path": "Organization.identifier",
+          "id": "Organization.identifier",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "slicing": {
+            "discriminator": [
+              "pattern:$this"
+            ],
+            "rules": "open"
+          },
+          "constraints": [
+            {
+              "key": "provider-org-min-identifier",
+              "severity": "error",
+              "human": "Must have at least one identifier",
+              "expression": "identifier.exists()"
+            }
+          ]
+        },
+        {
+          "path": "Organization.identifier",
+          "id": "Organization.identifier:providerLicense",
+          "min": 0,
+          "max": "1",
+          "sliceName": "providerLicense"
+        },
+        {
+          "path": "Organization.identifier.use",
+          "id": "Organization.identifier:providerLicense.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Organization.identifier.system",
+          "id": "Organization.identifier:providerLicense.system",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/license/provider-license"
+          }
+        },
+        {
+          "path": "Organization.identifier.value",
+          "id": "Organization.identifier:providerLicense.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Organization.identifier",
+          "id": "Organization.identifier:fid",
+          "min": 0,
+          "max": "1",
+          "sliceName": "fid"
+        },
+        {
+          "path": "Organization.identifier.use",
+          "id": "Organization.identifier:fid.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.system",
+          "id": "Organization.identifier:fid.type.coding.system",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/terminology/CodeSystem/facility-identifier-types"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.code",
+          "id": "Organization.identifier:fid.type.coding.code",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "fid"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.display",
+          "id": "Organization.identifier:fid.type.coding.display",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternString",
+            "value": "Facility ID"
+          }
+        },
+        {
+          "path": "Organization.identifier.value",
+          "id": "Organization.identifier:fid.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Organization.identifier",
+          "id": "Organization.identifier:frCode",
+          "min": 0,
+          "max": "1",
+          "sliceName": "frCode",
+          "constraints": [
+            {
+              "key": "provider-org-fr-code-format",
+              "severity": "warning",
+              "human": "FR Code must match expected format",
+              "expression": "value.matches('^FID-[0-9]{2}-[0-9]{6}-[0-9]$')"
+            }
+          ]
+        },
+        {
+          "path": "Organization.identifier.use",
+          "id": "Organization.identifier:frCode.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.system",
+          "id": "Organization.identifier:frCode.type.coding.system",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/terminology/CodeSystem/facility-identifier-types"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.code",
+          "id": "Organization.identifier:frCode.type.coding.code",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "fr-code"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.display",
+          "id": "Organization.identifier:frCode.type.coding.display",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternString",
+            "value": "Facility registry code"
+          }
+        },
+        {
+          "path": "Organization.identifier.value",
+          "id": "Organization.identifier:frCode.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Organization.identifier",
+          "id": "Organization.identifier:registrationNumber",
+          "min": 0,
+          "max": "1",
+          "sliceName": "registrationNumber"
+        },
+        {
+          "path": "Organization.identifier.use",
+          "id": "Organization.identifier:registrationNumber.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.system",
+          "id": "Organization.identifier:registrationNumber.type.coding.system",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/terminology/CodeSystem/facility-identifier-types"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.code",
+          "id": "Organization.identifier:registrationNumber.type.coding.code",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "registration-number"
+          }
+        },
+        {
+          "path": "Organization.identifier.type.coding.display",
+          "id": "Organization.identifier:registrationNumber.type.coding.display",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternString",
+            "value": "Facility registration number"
+          }
+        },
+        {
+          "path": "Organization.identifier.value",
+          "id": "Organization.identifier:registrationNumber.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Organization.active",
+          "id": "Organization.active",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.type",
+          "id": "Organization.type",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/organization-type-vs"
+          }
+        },
+        {
+          "path": "Organization.name",
+          "id": "Organization.name",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.telecom",
+          "id": "Organization.telecom",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.address",
+          "id": "Organization.address",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.address.city",
+          "id": "Organization.address.city",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.address.district",
+          "id": "Organization.address.district",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Organization.address.state",
+          "id": "Organization.address.state",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "approval-status-extension",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/approval-status-extension",
+      "name": "ApprovalStatusExtension",
+      "title": "Approval Status Extension",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "complex-type",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Extension",
+      "baseResource": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "context": [
+        "element:Element"
+      ],
+      "elementSource": "differential",
+      "requiredElements": [],
+      "mustSupportElements": [],
+      "bindings": [
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/approval-status-vs"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Extension.extension",
+          "id": "Extension.extension",
+          "min": null,
+          "max": "0"
+        },
+        {
+          "path": "Extension.url",
+          "id": "Extension.url",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/approval-status-extension"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "min": null,
+          "max": null,
+          "types": [
+            "CodeableConcept"
+          ],
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/approval-status-vs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "facility-level-extension",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/facility-level-extension",
+      "name": "FacilityLevelExtension",
+      "title": "Facility Level Extension",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "complex-type",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Extension",
+      "baseResource": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "context": [
+        "element:Element"
+      ],
+      "elementSource": "differential",
+      "requiredElements": [],
+      "mustSupportElements": [],
+      "bindings": [
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/facility-level-vs"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Extension.extension",
+          "id": "Extension.extension",
+          "min": null,
+          "max": "0"
+        },
+        {
+          "path": "Extension.url",
+          "id": "Extension.url",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/facility-level-extension"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "min": null,
+          "max": null,
+          "types": [
+            "CodeableConcept"
+          ],
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/facility-level-vs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-allergyintolerance",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-allergyintolerance",
+      "name": "KenyaCoreAllergyIntolerance",
+      "title": "Kenya Core AllergyIntolerance Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "AllergyIntolerance",
+      "baseResource": "AllergyIntolerance",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "AllergyIntolerance.clinicalStatus",
+        "AllergyIntolerance.code",
+        "AllergyIntolerance.id",
+        "AllergyIntolerance.meta",
+        "AllergyIntolerance.meta.profile",
+        "AllergyIntolerance.verificationStatus"
+      ],
+      "mustSupportElements": [
+        "AllergyIntolerance.clinicalStatus",
+        "AllergyIntolerance.code",
+        "AllergyIntolerance.id",
+        "AllergyIntolerance.meta",
+        "AllergyIntolerance.onset[x]",
+        "AllergyIntolerance.patient",
+        "AllergyIntolerance.reaction",
+        "AllergyIntolerance.reaction.manifestation",
+        "AllergyIntolerance.verificationStatus"
+      ],
+      "bindings": [
+        {
+          "path": "AllergyIntolerance.clinicalStatus",
+          "id": "AllergyIntolerance.clinicalStatus",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionClinicalStatusVS"
+        },
+        {
+          "path": "AllergyIntolerance.verificationStatus",
+          "id": "AllergyIntolerance.verificationStatus",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionVerificationStatusVS"
+        },
+        {
+          "path": "AllergyIntolerance.code",
+          "id": "AllergyIntolerance.code",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/substance-code"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "AllergyIntolerance.id",
+          "id": "AllergyIntolerance.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "AllergyIntolerance.meta",
+          "id": "AllergyIntolerance.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "AllergyIntolerance.meta.profile",
+          "id": "AllergyIntolerance.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-allergyintolerance|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-allergyintolerance|1.0.0"
+          }
+        },
+        {
+          "path": "AllergyIntolerance.clinicalStatus",
+          "id": "AllergyIntolerance.clinicalStatus",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionClinicalStatusVS"
+          }
+        },
+        {
+          "path": "AllergyIntolerance.verificationStatus",
+          "id": "AllergyIntolerance.verificationStatus",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionVerificationStatusVS"
+          }
+        },
+        {
+          "path": "AllergyIntolerance.code",
+          "id": "AllergyIntolerance.code",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/substance-code"
+          }
+        },
+        {
+          "path": "AllergyIntolerance.patient",
+          "id": "AllergyIntolerance.patient",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "AllergyIntolerance.onset[x]",
+          "id": "AllergyIntolerance.onset[x]",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "AllergyIntolerance.reaction",
+          "id": "AllergyIntolerance.reaction",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "AllergyIntolerance.reaction.manifestation",
+          "id": "AllergyIntolerance.reaction.manifestation",
+          "min": null,
+          "max": "1",
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-condition",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-condition",
+      "name": "KenyaCoreCondition",
+      "title": "KenyaCore Condition Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Condition",
+      "baseResource": "Condition",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Condition.code",
+        "Condition.id",
+        "Condition.meta",
+        "Condition.meta.profile",
+        "Condition.recordedDate"
+      ],
+      "mustSupportElements": [
+        "Condition.clinicalStatus",
+        "Condition.code",
+        "Condition.encounter",
+        "Condition.id",
+        "Condition.meta",
+        "Condition.onset[x]",
+        "Condition.recordedDate",
+        "Condition.subject",
+        "Condition.verificationStatus"
+      ],
+      "bindings": [
+        {
+          "path": "Condition.clinicalStatus",
+          "id": "Condition.clinicalStatus",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionClinicalStatusVS"
+        },
+        {
+          "path": "Condition.verificationStatus",
+          "id": "Condition.verificationStatus",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionVerificationStatusVS"
+        },
+        {
+          "path": "Condition.category",
+          "id": "Condition.category",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionCategoryVS"
+        },
+        {
+          "path": "Condition.code",
+          "id": "Condition.code",
+          "strength": "required",
+          "valueSet": "http://id.who.int/icd/release/11-mms"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Condition.id",
+          "id": "Condition.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Condition.meta",
+          "id": "Condition.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Condition.meta.profile",
+          "id": "Condition.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/condition|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/condition|1.0.0"
+          }
+        },
+        {
+          "path": "Condition.clinicalStatus",
+          "id": "Condition.clinicalStatus",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionClinicalStatusVS"
+          }
+        },
+        {
+          "path": "Condition.verificationStatus",
+          "id": "Condition.verificationStatus",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionVerificationStatusVS"
+          }
+        },
+        {
+          "path": "Condition.category",
+          "id": "Condition.category",
+          "min": null,
+          "max": null,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionCategoryVS"
+          }
+        },
+        {
+          "path": "Condition.code",
+          "id": "Condition.code",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://id.who.int/icd/release/11-mms"
+          }
+        },
+        {
+          "path": "Condition.subject",
+          "id": "Condition.subject",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "Condition.encounter",
+          "id": "Condition.encounter",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter"
+          ]
+        },
+        {
+          "path": "Condition.onset[x]",
+          "id": "Condition.onset[x]",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Condition.recordedDate",
+          "id": "Condition.recordedDate",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-diagnosticreport",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-diagnosticreport",
+      "name": "KenyaCoreDiagnosticReport",
+      "title": "Kenya Core DiagnosticReport Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "DiagnosticReport",
+      "baseResource": "DiagnosticReport",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "DiagnosticReport.id",
+        "DiagnosticReport.meta",
+        "DiagnosticReport.meta.profile",
+        "DiagnosticReport.result",
+        "DiagnosticReport.subject"
+      ],
+      "mustSupportElements": [
+        "DiagnosticReport.category",
+        "DiagnosticReport.code",
+        "DiagnosticReport.effective[x]",
+        "DiagnosticReport.encounter",
+        "DiagnosticReport.id",
+        "DiagnosticReport.issued",
+        "DiagnosticReport.meta",
+        "DiagnosticReport.performer",
+        "DiagnosticReport.result",
+        "DiagnosticReport.status",
+        "DiagnosticReport.subject"
+      ],
+      "bindings": [
+        {
+          "path": "DiagnosticReport.status",
+          "id": "DiagnosticReport.status",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+        },
+        {
+          "path": "DiagnosticReport.category",
+          "id": "DiagnosticReport.category",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+        },
+        {
+          "path": "DiagnosticReport.code",
+          "id": "DiagnosticReport.code",
+          "strength": "required",
+          "valueSet": "https://nhts.dha.go.ke/orgs/Regenstrief-Institute/sources/LOINC/"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "DiagnosticReport.id",
+          "id": "DiagnosticReport.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DiagnosticReport.meta",
+          "id": "DiagnosticReport.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DiagnosticReport.meta.profile",
+          "id": "DiagnosticReport.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-diagnosticreport|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-diagnosticreport|1.0.0"
+          }
+        },
+        {
+          "path": "DiagnosticReport.status",
+          "id": "DiagnosticReport.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+          }
+        },
+        {
+          "path": "DiagnosticReport.category",
+          "id": "DiagnosticReport.category",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+          }
+        },
+        {
+          "path": "DiagnosticReport.code",
+          "id": "DiagnosticReport.code",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://nhts.dha.go.ke/orgs/Regenstrief-Institute/sources/LOINC/"
+          }
+        },
+        {
+          "path": "DiagnosticReport.subject",
+          "id": "DiagnosticReport.subject",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "DiagnosticReport.encounter",
+          "id": "DiagnosticReport.encounter",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DiagnosticReport.effective[x]",
+          "id": "DiagnosticReport.effective[x]",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DiagnosticReport.issued",
+          "id": "DiagnosticReport.issued",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DiagnosticReport.performer",
+          "id": "DiagnosticReport.performer",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DiagnosticReport.result",
+          "id": "DiagnosticReport.result",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-documentreference",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-documentreference",
+      "name": "KenyaCoreDocumentReference",
+      "title": "Kenya Core DocumentReference Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "DocumentReference",
+      "baseResource": "DocumentReference",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "DocumentReference.id",
+        "DocumentReference.meta",
+        "DocumentReference.meta.profile",
+        "DocumentReference.subject",
+        "DocumentReference.type"
+      ],
+      "mustSupportElements": [
+        "DocumentReference.author",
+        "DocumentReference.category",
+        "DocumentReference.content",
+        "DocumentReference.content.attachment",
+        "DocumentReference.custodian",
+        "DocumentReference.date",
+        "DocumentReference.id",
+        "DocumentReference.meta",
+        "DocumentReference.status",
+        "DocumentReference.subject",
+        "DocumentReference.type"
+      ],
+      "bindings": [
+        {
+          "path": "DocumentReference.status",
+          "id": "DocumentReference.status",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
+        },
+        {
+          "path": "DocumentReference.type",
+          "id": "DocumentReference.type",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"
+        },
+        {
+          "path": "DocumentReference.category",
+          "id": "DocumentReference.category",
+          "strength": "required",
+          "valueSet": "https://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-documentreference-category.html"
+        },
+        {
+          "path": "DocumentReference.content.attachment.contentType",
+          "id": "DocumentReference.content.attachment.contentType",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "DocumentReference.id",
+          "id": "DocumentReference.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DocumentReference.meta",
+          "id": "DocumentReference.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DocumentReference.meta.profile",
+          "id": "DocumentReference.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-documentreference|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-documentreference|1.0.0"
+          }
+        },
+        {
+          "path": "DocumentReference.status",
+          "id": "DocumentReference.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
+          }
+        },
+        {
+          "path": "DocumentReference.type",
+          "id": "DocumentReference.type",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"
+          }
+        },
+        {
+          "path": "DocumentReference.category",
+          "id": "DocumentReference.category",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-documentreference-category.html"
+          }
+        },
+        {
+          "path": "DocumentReference.subject",
+          "id": "DocumentReference.subject",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "DocumentReference.date",
+          "id": "DocumentReference.date",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DocumentReference.author",
+          "id": "DocumentReference.author",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke"
+          ]
+        },
+        {
+          "path": "DocumentReference.custodian",
+          "id": "DocumentReference.custodian",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization"
+          ]
+        },
+        {
+          "path": "DocumentReference.content",
+          "id": "DocumentReference.content",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DocumentReference.content.attachment",
+          "id": "DocumentReference.content.attachment",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "DocumentReference.content.attachment.contentType",
+          "id": "DocumentReference.content.attachment.contentType",
+          "min": null,
+          "max": null,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-encounter",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter",
+      "name": "KenyaCoreEncounter",
+      "title": "Kenya Core Encounter Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Encounter",
+      "baseResource": "Encounter",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Encounter.id",
+        "Encounter.meta",
+        "Encounter.meta.profile",
+        "Encounter.participant.individual",
+        "Encounter.subject"
+      ],
+      "mustSupportElements": [
+        "Encounter.class",
+        "Encounter.diagnosis",
+        "Encounter.id",
+        "Encounter.location",
+        "Encounter.meta",
+        "Encounter.participant.individual",
+        "Encounter.serviceProvider",
+        "Encounter.status",
+        "Encounter.subject"
+      ],
+      "bindings": [
+        {
+          "path": "Encounter.status",
+          "id": "Encounter.status",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/encounter-status"
+        },
+        {
+          "path": "Encounter.class",
+          "id": "Encounter.class",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+        },
+        {
+          "path": "Encounter.type",
+          "id": "Encounter.type",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/encounter-type"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Encounter.id",
+          "id": "Encounter.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Encounter.meta",
+          "id": "Encounter.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Encounter.meta.profile",
+          "id": "Encounter.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter|1.0.0"
+          }
+        },
+        {
+          "path": "Encounter.status",
+          "id": "Encounter.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/encounter-status"
+          }
+        },
+        {
+          "path": "Encounter.class",
+          "id": "Encounter.class",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/v3-ActEncounterCode"
+          }
+        },
+        {
+          "path": "Encounter.type",
+          "id": "Encounter.type",
+          "min": null,
+          "max": null,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/encounter-type"
+          }
+        },
+        {
+          "path": "Encounter.subject",
+          "id": "Encounter.subject",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "Encounter.participant.individual",
+          "id": "Encounter.participant.individual",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Encounter.diagnosis",
+          "id": "Encounter.diagnosis",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Encounter.location",
+          "id": "Encounter.location",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Encounter.serviceProvider",
+          "id": "Encounter.serviceProvider",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-episodeofcare",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-episodeofcare",
+      "name": "KenyaCoreEpisodeOfCare",
+      "title": "Kenya Core EpisodeOfCare Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "EpisodeOfCare",
+      "baseResource": "EpisodeOfCare",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "EpisodeOfCare.id",
+        "EpisodeOfCare.meta",
+        "EpisodeOfCare.meta.profile"
+      ],
+      "mustSupportElements": [
+        "EpisodeOfCare.careManager",
+        "EpisodeOfCare.diagnosis",
+        "EpisodeOfCare.diagnosis.condition",
+        "EpisodeOfCare.id",
+        "EpisodeOfCare.managingOrganization",
+        "EpisodeOfCare.meta",
+        "EpisodeOfCare.patient",
+        "EpisodeOfCare.period",
+        "EpisodeOfCare.status",
+        "EpisodeOfCare.type"
+      ],
+      "bindings": [
+        {
+          "path": "EpisodeOfCare.status",
+          "id": "EpisodeOfCare.status",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/episode-of-care-status"
+        },
+        {
+          "path": "EpisodeOfCare.type",
+          "id": "EpisodeOfCare.type",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.ke/fhir/ValueSet/episode-of-care-type"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "EpisodeOfCare.id",
+          "id": "EpisodeOfCare.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "EpisodeOfCare.meta",
+          "id": "EpisodeOfCare.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "EpisodeOfCare.meta.profile",
+          "id": "EpisodeOfCare.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-episodeofcare|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-episodeofcare|1.0.0"
+          }
+        },
+        {
+          "path": "EpisodeOfCare.status",
+          "id": "EpisodeOfCare.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/episode-of-care-status"
+          }
+        },
+        {
+          "path": "EpisodeOfCare.type",
+          "id": "EpisodeOfCare.type",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.ke/fhir/ValueSet/episode-of-care-type"
+          }
+        },
+        {
+          "path": "EpisodeOfCare.diagnosis",
+          "id": "EpisodeOfCare.diagnosis",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "EpisodeOfCare.diagnosis.condition",
+          "id": "EpisodeOfCare.diagnosis.condition",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-condition"
+          ]
+        },
+        {
+          "path": "EpisodeOfCare.patient",
+          "id": "EpisodeOfCare.patient",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "EpisodeOfCare.managingOrganization",
+          "id": "EpisodeOfCare.managingOrganization",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization"
+          ]
+        },
+        {
+          "path": "EpisodeOfCare.period",
+          "id": "EpisodeOfCare.period",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "EpisodeOfCare.careManager",
+          "id": "EpisodeOfCare.careManager",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-location",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-location",
+      "name": "KenyaCoreLocation",
+      "title": "Kenya Core Location Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Location",
+      "baseResource": "Location",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Location.id",
+        "Location.meta",
+        "Location.meta.profile"
+      ],
+      "mustSupportElements": [
+        "Location.address",
+        "Location.id",
+        "Location.managingOrganization",
+        "Location.meta",
+        "Location.name",
+        "Location.status",
+        "Location.type"
+      ],
+      "bindings": [
+        {
+          "path": "Location.status",
+          "id": "Location.status",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/location-status"
+        },
+        {
+          "path": "Location.type",
+          "id": "Location.type",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/location-type-vs"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Location.id",
+          "id": "Location.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Location.meta",
+          "id": "Location.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Location.meta.profile",
+          "id": "Location.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-location|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-location|1.0.0"
+          }
+        },
+        {
+          "path": "Location.status",
+          "id": "Location.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/location-status"
+          }
+        },
+        {
+          "path": "Location.name",
+          "id": "Location.name",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Location.type",
+          "id": "Location.type",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/location-type-vs"
+          }
+        },
+        {
+          "path": "Location.address",
+          "id": "Location.address",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Location.managingOrganization",
+          "id": "Location.managingOrganization",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-observation",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-observation",
+      "name": "KenyaCoreObservation",
+      "title": "Kenya Core Observation Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Observation",
+      "baseResource": "Observation",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Observation.category",
+        "Observation.effective[x]",
+        "Observation.id",
+        "Observation.meta",
+        "Observation.meta.profile",
+        "Observation.subject"
+      ],
+      "mustSupportElements": [
+        "Observation.category",
+        "Observation.code",
+        "Observation.effective[x]",
+        "Observation.encounter",
+        "Observation.id",
+        "Observation.meta",
+        "Observation.performer",
+        "Observation.status",
+        "Observation.subject",
+        "Observation.value[x]"
+      ],
+      "bindings": [],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Observation.id",
+          "id": "Observation.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Observation.meta",
+          "id": "Observation.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Observation.meta.profile",
+          "id": "Observation.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-observation|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-observation|1.0.0"
+          }
+        },
+        {
+          "path": "Observation.status",
+          "id": "Observation.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Observation.category",
+          "id": "Observation.category",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Observation.code",
+          "id": "Observation.code",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Observation.subject",
+          "id": "Observation.subject",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "Observation.encounter",
+          "id": "Observation.encounter",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter"
+          ]
+        },
+        {
+          "path": "Observation.effective[x]",
+          "id": "Observation.effective[x]",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Observation.performer",
+          "id": "Observation.performer",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke"
+          ]
+        },
+        {
+          "path": "Observation.value[x]",
+          "id": "Observation.value[x]",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-patient",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient",
+      "name": "KenyaCorePatient",
+      "title": "KenyaCore Patient Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Patient",
+      "baseResource": "Patient",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Patient.birthDate",
+        "Patient.gender",
+        "Patient.id",
+        "Patient.identifier",
+        "Patient.identifier.system",
+        "Patient.identifier.value",
+        "Patient.meta",
+        "Patient.meta.profile",
+        "Patient.name",
+        "Patient.name.family",
+        "Patient.name.given"
+      ],
+      "mustSupportElements": [
+        "Patient.active",
+        "Patient.address",
+        "Patient.address.country",
+        "Patient.birthDate",
+        "Patient.contact",
+        "Patient.contact.relationship",
+        "Patient.extension",
+        "Patient.gender",
+        "Patient.id",
+        "Patient.identifier",
+        "Patient.maritalStatus",
+        "Patient.meta",
+        "Patient.name",
+        "Patient.name.given",
+        "Patient.telecom"
+      ],
+      "bindings": [
+        {
+          "path": "Patient.gender",
+          "id": "Patient.gender",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender"
+        },
+        {
+          "path": "Patient.maritalStatus",
+          "id": "Patient.maritalStatus",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/marital-status"
+        },
+        {
+          "path": "Patient.contact.relationship",
+          "id": "Patient.contact.relationship",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/patient-contactrelationship"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Patient.id",
+          "id": "Patient.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "constraints": [
+            {
+              "key": "sha-patient-id-format",
+              "severity": "warning",
+              "human": "Patient ID should match SHA format: CR[timestamp]-[sequence]",
+              "expression": "matches('^CR[0-9]{13}-[0-9]+$')"
+            }
+          ]
+        },
+        {
+          "path": "Patient.meta",
+          "id": "Patient.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.meta.profile",
+          "id": "Patient.meta.profile",
+          "min": 1,
+          "max": "1",
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/patient|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/patient|1.0.0"
+          }
+        },
+        {
+          "path": "Patient.extension",
+          "id": "Patient.extension",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "slicing": {
+            "discriminator": [
+              "value:url"
+            ],
+            "rules": "open"
+          }
+        },
+        {
+          "path": "Patient.extension",
+          "id": "Patient.extension:citizenship",
+          "min": 0,
+          "max": "1",
+          "sliceName": "citizenship",
+          "types": [
+            "Extension"
+          ],
+          "typeProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/patient-ethnicity-extension"
+          ]
+        },
+        {
+          "path": "Patient.extension",
+          "id": "Patient.extension:personWithDisability",
+          "min": 0,
+          "max": "1",
+          "sliceName": "personWithDisability",
+          "types": [
+            "Extension"
+          ],
+          "typeProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/person-with-disability-extension"
+          ]
+        },
+        {
+          "path": "Patient.identifier",
+          "id": "Patient.identifier",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "slicing": {
+            "discriminator": [
+              "value:system"
+            ],
+            "rules": "closed"
+          },
+          "constraints": [
+            {
+              "key": "sha-patient-min-identifier",
+              "severity": "error",
+              "human": "Must have at least one identifier (SHA number, phone number, household number, or national ID)",
+              "expression": "identifier.where(system='https://fhir.sha.go.ke/fhir/identifier/shanumber' or system='https://fhir.sha.go.ke/fhir/identifier/phonenumber' or system='https://fhir.sha.go.ke/fhir/identifier/householdnumber' or system='https://fhir.sha.go.ke/fhir/identifier/nationalid').exists()"
+            }
+          ]
+        },
+        {
+          "path": "Patient.identifier",
+          "id": "Patient.identifier:shaNumber",
+          "min": 0,
+          "max": "1",
+          "sliceName": "shaNumber"
+        },
+        {
+          "path": "Patient.identifier.use",
+          "id": "Patient.identifier:shaNumber.use",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedCode",
+            "value": "official"
+          },
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Patient.identifier.system",
+          "id": "Patient.identifier:shaNumber.system",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/shanumber"
+          },
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/shanumber"
+          }
+        },
+        {
+          "path": "Patient.identifier.value",
+          "id": "Patient.identifier:shaNumber.value",
+          "min": 1,
+          "max": null,
+          "constraints": [
+            {
+              "key": "sha-number-format",
+              "severity": "warning",
+              "human": "SHA Number should match format: CR[timestamp]-[sequence]",
+              "expression": "matches('^CR[0-9]{13}-[0-9]+$')"
+            }
+          ]
+        },
+        {
+          "path": "Patient.identifier",
+          "id": "Patient.identifier:phoneNumber",
+          "min": 0,
+          "max": "1",
+          "sliceName": "phoneNumber"
+        },
+        {
+          "path": "Patient.identifier.use",
+          "id": "Patient.identifier:phoneNumber.use",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedCode",
+            "value": "official"
+          },
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Patient.identifier.system",
+          "id": "Patient.identifier:phoneNumber.system",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/phonenumber"
+          },
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/phonenumber"
+          }
+        },
+        {
+          "path": "Patient.identifier.value",
+          "id": "Patient.identifier:phoneNumber.value",
+          "min": 1,
+          "max": null,
+          "constraints": [
+            {
+              "key": "kenya-phone-format",
+              "severity": "warning",
+              "human": "Phone number should be valid Kenya format",
+              "expression": "matches('^[+]254[0-9]{9}$')"
+            }
+          ]
+        },
+        {
+          "path": "Patient.identifier",
+          "id": "Patient.identifier:householdNumber",
+          "min": 0,
+          "max": "1",
+          "sliceName": "householdNumber"
+        },
+        {
+          "path": "Patient.identifier.use",
+          "id": "Patient.identifier:householdNumber.use",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedCode",
+            "value": "official"
+          },
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Patient.identifier.system",
+          "id": "Patient.identifier:householdNumber.system",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/householdnumber"
+          },
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/householdnumber"
+          }
+        },
+        {
+          "path": "Patient.identifier.value",
+          "id": "Patient.identifier:householdNumber.value",
+          "min": 1,
+          "max": null,
+          "constraints": [
+            {
+              "key": "household-number-format",
+              "severity": "warning",
+              "human": "Household number should match format: HH[timestamp]-[sequence]",
+              "expression": "matches('^HH[0-9]{13}-[0-9]+$')"
+            }
+          ]
+        },
+        {
+          "path": "Patient.identifier",
+          "id": "Patient.identifier:nationalId",
+          "min": 0,
+          "max": "1",
+          "sliceName": "nationalId"
+        },
+        {
+          "path": "Patient.identifier.use",
+          "id": "Patient.identifier:nationalId.use",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedCode",
+            "value": "official"
+          },
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Patient.identifier.system",
+          "id": "Patient.identifier:nationalId.system",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/nationalid"
+          },
+          "pattern": {
+            "element": "patternUri",
+            "value": "https://fhir.sha.go.ke/fhir/identifier/nationalid"
+          }
+        },
+        {
+          "path": "Patient.identifier.value",
+          "id": "Patient.identifier:nationalId.value",
+          "min": 1,
+          "max": null,
+          "constraints": [
+            {
+              "key": "national-id-format",
+              "severity": "warning",
+              "human": "National ID should be 8 digits",
+              "expression": "matches('^[0-9]{8}$')"
+            }
+          ]
+        },
+        {
+          "path": "Patient.active",
+          "id": "Patient.active",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.name",
+          "id": "Patient.name",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.name.family",
+          "id": "Patient.name.family",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Patient.name.given",
+          "id": "Patient.name.given",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.telecom",
+          "id": "Patient.telecom",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.gender",
+          "id": "Patient.gender",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender"
+          }
+        },
+        {
+          "path": "Patient.birthDate",
+          "id": "Patient.birthDate",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "constraints": [
+            {
+              "key": "valid-birth-date",
+              "severity": "error",
+              "human": "Birth date should be valid and not in the future",
+              "expression": "$this <= today()"
+            }
+          ]
+        },
+        {
+          "path": "Patient.address",
+          "id": "Patient.address",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.address.country",
+          "id": "Patient.address.country",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.maritalStatus",
+          "id": "Patient.maritalStatus",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        },
+        {
+          "path": "Patient.contact",
+          "id": "Patient.contact",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Patient.contact.relationship",
+          "id": "Patient.contact.relationship",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/patient-contactrelationship"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-practitionerrole",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-practitionerrole",
+      "name": "KenyaCorePractitionerRole",
+      "title": "KenyaCore PractitionerRole Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "PractitionerRole",
+      "baseResource": "PractitionerRole",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "PractitionerRole.id",
+        "PractitionerRole.meta",
+        "PractitionerRole.meta.profile",
+        "PractitionerRole.practitioner"
+      ],
+      "mustSupportElements": [
+        "PractitionerRole.code",
+        "PractitionerRole.id",
+        "PractitionerRole.meta",
+        "PractitionerRole.organization",
+        "PractitionerRole.practitioner",
+        "PractitionerRole.specialty"
+      ],
+      "bindings": [
+        {
+          "path": "PractitionerRole.code",
+          "id": "PractitionerRole.code",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-roles"
+        },
+        {
+          "path": "PractitionerRole.specialty",
+          "id": "PractitionerRole.specialty",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-specialties"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "PractitionerRole.id",
+          "id": "PractitionerRole.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "PractitionerRole.meta",
+          "id": "PractitionerRole.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "PractitionerRole.meta.profile",
+          "id": "PractitionerRole.meta.profile",
+          "min": 1,
+          "max": "1",
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-role|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-role|1.0.0"
+          }
+        },
+        {
+          "path": "PractitionerRole.practitioner",
+          "id": "PractitionerRole.practitioner",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke"
+          ]
+        },
+        {
+          "path": "PractitionerRole.organization",
+          "id": "PractitionerRole.organization",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization"
+          ]
+        },
+        {
+          "path": "PractitionerRole.code",
+          "id": "PractitionerRole.code",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-roles"
+          }
+        },
+        {
+          "path": "PractitionerRole.specialty",
+          "id": "PractitionerRole.specialty",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-specialties"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-procedure",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-procedure",
+      "name": "KenyaCoreProcedure",
+      "title": "Kenya Core Procedure Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Procedure",
+      "baseResource": "Procedure",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Procedure.id",
+        "Procedure.meta",
+        "Procedure.meta.profile"
+      ],
+      "mustSupportElements": [
+        "Procedure.code",
+        "Procedure.encounter",
+        "Procedure.id",
+        "Procedure.meta",
+        "Procedure.performed[x]",
+        "Procedure.performer",
+        "Procedure.performer.actor",
+        "Procedure.reasonReference",
+        "Procedure.status",
+        "Procedure.subject"
+      ],
+      "bindings": [],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Procedure.id",
+          "id": "Procedure.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Procedure.meta",
+          "id": "Procedure.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Procedure.meta.profile",
+          "id": "Procedure.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-procedure|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-procedure|1.0.0"
+          }
+        },
+        {
+          "path": "Procedure.status",
+          "id": "Procedure.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Procedure.code",
+          "id": "Procedure.code",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Procedure.subject",
+          "id": "Procedure.subject",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "Procedure.encounter",
+          "id": "Procedure.encounter",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter"
+          ]
+        },
+        {
+          "path": "Procedure.performed[x]",
+          "id": "Procedure.performed[x]",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Procedure.performer",
+          "id": "Procedure.performer",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Procedure.performer.actor",
+          "id": "Procedure.performer.actor",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke"
+          ]
+        },
+        {
+          "path": "Procedure.reasonReference",
+          "id": "Procedure.reasonReference",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-questionnaireresponse",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-questionnaireresponse",
+      "name": "KenyaCoreQuestionnaireResponse",
+      "title": "Kenya Core QuestionnaireResponse Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "QuestionnaireResponse",
+      "baseResource": "QuestionnaireResponse",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "QuestionnaireResponse.id",
+        "QuestionnaireResponse.item",
+        "QuestionnaireResponse.item.answer.value[x]",
+        "QuestionnaireResponse.meta",
+        "QuestionnaireResponse.meta.profile",
+        "QuestionnaireResponse.questionnaire",
+        "QuestionnaireResponse.subject"
+      ],
+      "mustSupportElements": [
+        "QuestionnaireResponse.author",
+        "QuestionnaireResponse.authored",
+        "QuestionnaireResponse.encounter",
+        "QuestionnaireResponse.id",
+        "QuestionnaireResponse.item",
+        "QuestionnaireResponse.item.answer.value[x]",
+        "QuestionnaireResponse.item.linkId",
+        "QuestionnaireResponse.meta",
+        "QuestionnaireResponse.questionnaire",
+        "QuestionnaireResponse.status",
+        "QuestionnaireResponse.subject"
+      ],
+      "bindings": [
+        {
+          "path": "QuestionnaireResponse.status",
+          "id": "QuestionnaireResponse.status",
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/questionnaire-answers-status"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "QuestionnaireResponse.id",
+          "id": "QuestionnaireResponse.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.meta",
+          "id": "QuestionnaireResponse.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.meta.profile",
+          "id": "QuestionnaireResponse.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-questionnaireresponse|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-questionnaireresponse|1.0.0"
+          }
+        },
+        {
+          "path": "QuestionnaireResponse.questionnaire",
+          "id": "QuestionnaireResponse.questionnaire",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.status",
+          "id": "QuestionnaireResponse.status",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/questionnaire-answers-status"
+          }
+        },
+        {
+          "path": "QuestionnaireResponse.subject",
+          "id": "QuestionnaireResponse.subject",
+          "min": 1,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "QuestionnaireResponse.encounter",
+          "id": "QuestionnaireResponse.encounter",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.authored",
+          "id": "QuestionnaireResponse.authored",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.author",
+          "id": "QuestionnaireResponse.author",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.item",
+          "id": "QuestionnaireResponse.item",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.item.linkId",
+          "id": "QuestionnaireResponse.item.linkId",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "QuestionnaireResponse.item.answer",
+          "id": "QuestionnaireResponse.item.answer",
+          "min": null,
+          "max": "1"
+        },
+        {
+          "path": "QuestionnaireResponse.item.answer.value[x]",
+          "id": "QuestionnaireResponse.item.answer.value[x]",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "kenya-core-relatedperson",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-relatedperson",
+      "name": "KenyaCoreRelatedPerson",
+      "title": "Kenya Core RelatedPerson Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "RelatedPerson",
+      "baseResource": "RelatedPerson",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "RelatedPerson.id",
+        "RelatedPerson.meta",
+        "RelatedPerson.meta.profile"
+      ],
+      "mustSupportElements": [
+        "RelatedPerson.id",
+        "RelatedPerson.identifier",
+        "RelatedPerson.meta",
+        "RelatedPerson.name",
+        "RelatedPerson.patient",
+        "RelatedPerson.relationship",
+        "RelatedPerson.telecom"
+      ],
+      "bindings": [
+        {
+          "path": "RelatedPerson.relationship",
+          "id": "RelatedPerson.relationship",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/related-person-relationship"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "RelatedPerson.id",
+          "id": "RelatedPerson.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "RelatedPerson.meta",
+          "id": "RelatedPerson.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "RelatedPerson.meta.profile",
+          "id": "RelatedPerson.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-relatedperson|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-relatedperson|1.0.0"
+          }
+        },
+        {
+          "path": "RelatedPerson.identifier",
+          "id": "RelatedPerson.identifier",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "slicing": {
+            "discriminator": [
+              "pattern:$this"
+            ],
+            "rules": "open"
+          }
+        },
+        {
+          "path": "RelatedPerson.patient",
+          "id": "RelatedPerson.patient",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "types": [
+            "Reference"
+          ],
+          "targetProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient"
+          ]
+        },
+        {
+          "path": "RelatedPerson.relationship",
+          "id": "RelatedPerson.relationship",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/related-person-relationship"
+          }
+        },
+        {
+          "path": "RelatedPerson.name",
+          "id": "RelatedPerson.name",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "RelatedPerson.telecom",
+          "id": "RelatedPerson.telecom",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    },
+    {
+      "id": "license-status-extension",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/license-status-extension",
+      "name": "LicenseStatusExtension",
+      "title": "License Status Extension",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "complex-type",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Extension",
+      "baseResource": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "context": [
+        "element:Element"
+      ],
+      "elementSource": "differential",
+      "requiredElements": [],
+      "mustSupportElements": [],
+      "bindings": [
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/kenya-license-status"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Extension.extension",
+          "id": "Extension.extension",
+          "min": null,
+          "max": "0"
+        },
+        {
+          "path": "Extension.url",
+          "id": "Extension.url",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/license-status-extension"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "min": null,
+          "max": null,
+          "types": [
+            "CodeableConcept"
+          ],
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/kenya-license-status"
+          }
+        }
+      ]
+    },
+    {
+      "id": "licensing-body-extension",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/licensing-body-extension",
+      "name": "LicensingBodyExtension",
+      "title": "Licensing Body Extension",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "complex-type",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Extension",
+      "baseResource": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "context": [
+        "element:Element"
+      ],
+      "elementSource": "differential",
+      "requiredElements": [],
+      "mustSupportElements": [],
+      "bindings": [
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/kenya-regulatory-body"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Extension.extension",
+          "id": "Extension.extension",
+          "min": null,
+          "max": "0"
+        },
+        {
+          "path": "Extension.url",
+          "id": "Extension.url",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/licensing-body-extension"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "min": null,
+          "max": null,
+          "types": [
+            "CodeableConcept"
+          ],
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/kenya-regulatory-body"
+          }
+        }
+      ]
+    },
+    {
+      "id": "patient-ethnicity-extension",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/patient-ethnicity-extension",
+      "name": "PatientEthnicityExtension",
+      "title": "Patient Ethnicity Extension",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "complex-type",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Extension",
+      "baseResource": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "context": [
+        "element:Element"
+      ],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Extension.value[x]"
+      ],
+      "mustSupportElements": [],
+      "bindings": [
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]:valueCodeableConcept",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/nz-ethnic-group-level-4"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Extension.extension",
+          "id": "Extension.extension",
+          "min": null,
+          "max": "0"
+        },
+        {
+          "path": "Extension.url",
+          "id": "Extension.url",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/patient-ethnicity-extension"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "min": 1,
+          "max": null,
+          "slicing": {
+            "discriminator": [
+              "type:$this"
+            ],
+            "rules": "open"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]:valueCodeableConcept",
+          "min": 1,
+          "max": "1",
+          "sliceName": "valueCodeableConcept",
+          "types": [
+            "CodeableConcept"
+          ],
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/nz-ethnic-group-level-4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "person-with-disability-extension",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/person-with-disability-extension",
+      "name": "PersonWithDisability",
+      "title": "Person With Disability Extension",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "complex-type",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Extension",
+      "baseResource": "Extension",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+      "context": [
+        "element:Element"
+      ],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Extension.value[x]"
+      ],
+      "mustSupportElements": [],
+      "bindings": [],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Extension.extension",
+          "id": "Extension.extension",
+          "min": null,
+          "max": "0"
+        },
+        {
+          "path": "Extension.url",
+          "id": "Extension.url",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/person-with-disability-extension"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]",
+          "min": 1,
+          "max": null,
+          "slicing": {
+            "discriminator": [
+              "type:$this"
+            ],
+            "rules": "open"
+          }
+        },
+        {
+          "path": "Extension.value[x]",
+          "id": "Extension.value[x]:valueBoolean",
+          "min": 1,
+          "max": "1",
+          "sliceName": "valueBoolean",
+          "types": [
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practitioner-sha-ke",
+      "url": "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke",
+      "name": "KenyaCorePractitioner",
+      "title": "KenyaCore Practitioner Profile",
+      "version": "1.0.0",
+      "status": "active",
+      "kind": "resource",
+      "derivation": "constraint",
+      "abstract": false,
+      "type": "Practitioner",
+      "baseResource": "Practitioner",
+      "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+      "context": [],
+      "elementSource": "differential",
+      "requiredElements": [
+        "Practitioner.active",
+        "Practitioner.address.text",
+        "Practitioner.gender",
+        "Practitioner.id",
+        "Practitioner.identifier",
+        "Practitioner.identifier.value",
+        "Practitioner.meta",
+        "Practitioner.meta.profile",
+        "Practitioner.name",
+        "Practitioner.name.text",
+        "Practitioner.telecom",
+        "Practitioner.telecom.system",
+        "Practitioner.telecom.value"
+      ],
+      "mustSupportElements": [
+        "Practitioner.id",
+        "Practitioner.identifier.period",
+        "Practitioner.meta",
+        "Practitioner.qualification.code",
+        "Practitioner.qualification.extension",
+        "Practitioner.qualification.period"
+      ],
+      "bindings": [
+        {
+          "path": "Practitioner.identifier.system",
+          "id": "Practitioner.identifier:registrationNumber.system",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registration-number"
+        },
+        {
+          "path": "Practitioner.identifier.system",
+          "id": "Practitioner.identifier:registryID.system",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registry-id"
+        },
+        {
+          "path": "Practitioner.identifier.system",
+          "id": "Practitioner.identifier:nationalID.system",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/national-id"
+        },
+        {
+          "path": "Practitioner.gender",
+          "id": "Practitioner.gender",
+          "strength": "required",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender"
+        },
+        {
+          "path": "Practitioner.qualification.code",
+          "id": "Practitioner.qualification.code",
+          "strength": "preferred",
+          "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-specialties"
+        }
+      ],
+      "rootConstraints": [],
+      "elements": [
+        {
+          "path": "Practitioner.id",
+          "id": "Practitioner.id",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Practitioner.meta",
+          "id": "Practitioner.meta",
+          "min": 1,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Practitioner.meta.profile",
+          "id": "Practitioner.meta.profile",
+          "min": 1,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner|1.0.0"
+          },
+          "pattern": {
+            "element": "patternCanonical",
+            "value": "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner|1.0.0"
+          }
+        },
+        {
+          "path": "Practitioner.identifier",
+          "id": "Practitioner.identifier",
+          "min": 3,
+          "max": null,
+          "slicing": {
+            "discriminator": [
+              "value:system"
+            ],
+            "rules": "open"
+          },
+          "constraints": [
+            {
+              "key": "ken-prac-min-identifier",
+              "severity": "error",
+              "human": "Must have at least one identifier (registration number, slade code, registry ID, or national ID)",
+              "expression": "identifier.where(system='https://fhir.sha.go.ke/fhir/Practitioner/PractitionerRegistrationNumber' or system='https://fhir.sha.go.ke/fhir/Practitioner/SladeCode' or system='https://fhir.sha.go.ke/fhir/Practitioner/PractitionerRegistryID' or system='https://fhir.sha.go.ke/fhir/Practitioner/National_ID').exists()"
+            }
+          ]
+        },
+        {
+          "path": "Practitioner.identifier",
+          "id": "Practitioner.identifier:registrationNumber",
+          "min": 1,
+          "max": "1",
+          "sliceName": "registrationNumber"
+        },
+        {
+          "path": "Practitioner.identifier.use",
+          "id": "Practitioner.identifier:registrationNumber.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.system",
+          "id": "Practitioner.identifier:registrationNumber.system",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/Practitioner/PractitionerRegistrationNumber"
+          },
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registration-number"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.value",
+          "id": "Practitioner.identifier:registrationNumber.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.identifier",
+          "id": "Practitioner.identifier:registryID",
+          "min": 1,
+          "max": "1",
+          "sliceName": "registryID"
+        },
+        {
+          "path": "Practitioner.identifier.use",
+          "id": "Practitioner.identifier:registryID.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.system",
+          "id": "Practitioner.identifier:registryID.system",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/Practitioner/PractitionerRegistryID"
+          },
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registry-id"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.value",
+          "id": "Practitioner.identifier:registryID.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.identifier",
+          "id": "Practitioner.identifier:nationalID",
+          "min": 1,
+          "max": "1",
+          "sliceName": "nationalID"
+        },
+        {
+          "path": "Practitioner.identifier.use",
+          "id": "Practitioner.identifier:nationalID.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.system",
+          "id": "Practitioner.identifier:nationalID.system",
+          "min": null,
+          "max": null,
+          "fixed": {
+            "element": "fixedUri",
+            "value": "https://fhir.sha.go.ke/fhir/Practitioner/National_ID"
+          },
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/national-id"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.value",
+          "id": "Practitioner.identifier:nationalID.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.identifier",
+          "id": "Practitioner.identifier:licenseNumber",
+          "min": 0,
+          "max": "*",
+          "sliceName": "licenseNumber"
+        },
+        {
+          "path": "Practitioner.identifier.use",
+          "id": "Practitioner.identifier:licenseNumber.use",
+          "min": null,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "official"
+          }
+        },
+        {
+          "path": "Practitioner.identifier.value",
+          "id": "Practitioner.identifier:licenseNumber.value",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.identifier.period",
+          "id": "Practitioner.identifier:licenseNumber.period",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        },
+        {
+          "path": "Practitioner.active",
+          "id": "Practitioner.active",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.name",
+          "id": "Practitioner.name",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.name.text",
+          "id": "Practitioner.name.text",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.telecom",
+          "id": "Practitioner.telecom",
+          "min": 1,
+          "max": null,
+          "slicing": {
+            "discriminator": [
+              "value:system"
+            ],
+            "rules": "open"
+          },
+          "constraints": [
+            {
+              "key": "ken-prac-min-contact",
+              "severity": "error",
+              "human": "Must have at least one email or phone contact",
+              "expression": "telecom.where(system='email').exists() or telecom.where(system='phone').exists()"
+            },
+            {
+              "key": "ken-prac-contact-format",
+              "severity": "error",
+              "human": "Contact values must not be empty",
+              "expression": "telecom.all(value.exists())"
+            }
+          ]
+        },
+        {
+          "path": "Practitioner.telecom",
+          "id": "Practitioner.telecom:email",
+          "min": 0,
+          "max": "*",
+          "sliceName": "email"
+        },
+        {
+          "path": "Practitioner.telecom.system",
+          "id": "Practitioner.telecom:email.system",
+          "min": 1,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "email"
+          }
+        },
+        {
+          "path": "Practitioner.telecom.value",
+          "id": "Practitioner.telecom:email.value",
+          "min": 1,
+          "max": null,
+          "constraints": [
+            {
+              "key": "ken-prac-email-format",
+              "severity": "warning",
+              "human": "Email must be valid format if provided",
+              "expression": "matches('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[.][A-Za-z]{2,}$')"
+            }
+          ]
+        },
+        {
+          "path": "Practitioner.telecom",
+          "id": "Practitioner.telecom:phone",
+          "min": 0,
+          "max": "*",
+          "sliceName": "phone"
+        },
+        {
+          "path": "Practitioner.telecom.system",
+          "id": "Practitioner.telecom:phone.system",
+          "min": 1,
+          "max": null,
+          "pattern": {
+            "element": "patternCode",
+            "value": "phone"
+          }
+        },
+        {
+          "path": "Practitioner.telecom.value",
+          "id": "Practitioner.telecom:phone.value",
+          "min": 1,
+          "max": null,
+          "constraints": [
+            {
+              "key": "ken-prac-phone-format",
+              "severity": "warning",
+              "human": "Phone must follow Kenya format (+254XXXXXXXXX)",
+              "expression": "matches('^[+]254[17][0-9]{8}$')"
+            }
+          ]
+        },
+        {
+          "path": "Practitioner.address.text",
+          "id": "Practitioner.address.text",
+          "min": 1,
+          "max": null
+        },
+        {
+          "path": "Practitioner.gender",
+          "id": "Practitioner.gender",
+          "min": 1,
+          "max": null,
+          "binding": {
+            "strength": "required",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender"
+          }
+        },
+        {
+          "path": "Practitioner.qualification.extension",
+          "id": "Practitioner.qualification.extension",
+          "min": null,
+          "max": null,
+          "slicing": {
+            "discriminator": [
+              "value:url"
+            ],
+            "rules": "open"
+          }
+        },
+        {
+          "path": "Practitioner.qualification.extension",
+          "id": "Practitioner.qualification.extension:licenseStatus",
+          "min": 0,
+          "max": "1",
+          "mustSupport": true,
+          "sliceName": "licenseStatus",
+          "types": [
+            "Extension"
+          ],
+          "typeProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/license-status-extension"
+          ]
+        },
+        {
+          "path": "Practitioner.qualification.extension",
+          "id": "Practitioner.qualification.extension:licensingBody",
+          "min": 0,
+          "max": "1",
+          "mustSupport": true,
+          "sliceName": "licensingBody",
+          "types": [
+            "Extension"
+          ],
+          "typeProfiles": [
+            "https://fhir.sha.go.ke/fhir/StructureDefinition/licensing-body-extension"
+          ]
+        },
+        {
+          "path": "Practitioner.qualification.code",
+          "id": "Practitioner.qualification.code",
+          "min": null,
+          "max": null,
+          "mustSupport": true,
+          "binding": {
+            "strength": "preferred",
+            "valueSet": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-specialties"
+          }
+        },
+        {
+          "path": "Practitioner.qualification.period",
+          "id": "Practitioner.qualification.period",
+          "min": null,
+          "max": null,
+          "mustSupport": true
+        }
+      ]
+    }
+  ],
+  "codeSystems": [
+    {
+      "id": "ApprovalStatusCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/ApprovalStatusCS",
+      "name": "ApprovalStatusCS",
+      "title": "Approval Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "ClaimDiagnosisCodeableConceptCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/ClaimDiagnosisCodeableConceptCS",
+      "name": "ClaimDiagnosisCodeableConceptCS",
+      "title": "Subsite Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 1000,
+      "conceptCount": 1000
+    },
+    {
+      "id": "ExclusionCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/ExclusionCS",
+      "name": "ExclusionCS",
+      "title": "Exclusion Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "FacilityIdentifierTypesCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/FacilityIdentifierTypesCS",
+      "name": "FacilityIdentifierTypesCS",
+      "title": "Facility Identifier Types",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "FacilityLevelCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/FacilityLevelCS",
+      "name": "FacilityLevelCS",
+      "title": "Facility Level",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "KenyaBodySiteCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaBodySiteCS",
+      "name": "KenyaBodySiteCS",
+      "title": "BodySite Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "KenyaLicenseStatus",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaLicenseStatus",
+      "name": "KenyaLicenseStatus",
+      "title": "Kenya License Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2,
+      "conceptCount": 2
+    },
+    {
+      "id": "KenyaRegulatoryBody",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaRegulatoryBody",
+      "name": "KenyaRegulatoryBody",
+      "title": "Kenya Regulatory Body",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 12,
+      "conceptCount": 12
+    },
+    {
+      "id": "KenyaSocialHealthAuthorityInterventionCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaSocialHealthAuthorityInterventionCS",
+      "name": "KenyaSocialHealthAuthorityInterventionCS",
+      "title": "Condition Category Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 1000,
+      "conceptCount": 1000
+    },
+    {
+      "id": "KenyaSubSiteCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaSubSiteCS",
+      "name": "KenyaSubSiteCS",
+      "title": "Subsite Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "LocationTypeCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/LocationTypeCS",
+      "name": "LocationTypeCS",
+      "title": "Location Type",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 24,
+      "conceptCount": 24
+    },
+    {
+      "id": "OrganizationTypeCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/OrganizationTypeCS",
+      "name": "OrganizationTypeCS",
+      "title": "Organisation Type",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 230,
+      "conceptCount": 230
+    },
+    {
+      "id": "PractitionerRolesCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/PractitionerRolesCS",
+      "name": "PractitionerRolesCS",
+      "title": "Practitioner Roles Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "PractitionerSpecialtiesCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/PractitionerSpecialtiesCS",
+      "name": "PractitionerSpecialtiesCS",
+      "title": "Practitioner Specialities Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 41,
+      "conceptCount": 41
+    },
+    {
+      "id": "PreAuthExclusionsCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/PreAuthExclusionsCS",
+      "name": "PreAuthExclusionsCS",
+      "title": "PreAuthExclusions Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "WaiverTypeCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/WaiverTypeCS",
+      "name": "WaiverTypeCS",
+      "title": "Waiver Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "active-components-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/active-components-cs",
+      "name": "ActiveComponentsCS",
+      "title": "Active Components CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2632,
+      "conceptCount": 2632
+    },
+    {
+      "id": "additional-instruction-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/additional-instruction-cs",
+      "name": "AdditionalInstructionCS",
+      "title": "Additional Instruction Codes CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 25,
+      "conceptCount": 25
+    },
+    {
+      "id": "address-use-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/address-use-cs",
+      "name": "AddressUseCS",
+      "title": "Address Use Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "adjudication-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/adjudication-cs",
+      "name": "AdjudicationCS",
+      "title": "Adjudication Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 8,
+      "conceptCount": 8
+    },
+    {
+      "id": "adjustment-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/adjustment-type-cs",
+      "name": "AdjustmentTypeCS",
+      "title": "Adjustment Type",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2,
+      "conceptCount": 2
+    },
+    {
+      "id": "administration-method-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/administration-method-cs",
+      "name": "AdministrationMethodCS",
+      "title": "Administration Method Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 8,
+      "conceptCount": 8
+    },
+    {
+      "id": "administrative-gender-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/administrative-gender-cs",
+      "name": "AdministrativeGenderCS",
+      "title": "Administrative Gender Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "ambulance-case-status",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/ambulance-case-status",
+      "name": "AmbulanceCaseStatusCS",
+      "title": "Ambulance Case Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 11,
+      "conceptCount": 11
+    },
+    {
+      "id": "annual-quantity-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/annual-quantity-type-cs",
+      "name": "AnnualQuantityTypeCS",
+      "title": "Annual Quantity Type",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "approach-site-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/approach-site-cs",
+      "name": "ApproachSiteCS",
+      "title": "Approach Site Codes CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 20,
+      "conceptCount": 20
+    },
+    {
+      "id": "as-needed-reason-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/as-needed-reason-cs",
+      "name": "AsNeededReasonCS",
+      "title": "As Needed Reason Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 8,
+      "conceptCount": 8
+    },
+    {
+      "id": "assessment-types",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/assessment-types",
+      "name": "AssessmentTypesCS",
+      "title": "Assessment Types",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "attachment-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/attachment-type-cs",
+      "name": "AttachmentTypeCS",
+      "title": "Attachment Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "auth-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/auth-type-cs",
+      "name": "AuthTypeCS",
+      "title": "Authorization Type",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "authorization-failure-reason-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/authorization-failure-reason-cs",
+      "name": "AuthorizationFailureReasonCS",
+      "title": "Authorization Failure Reason",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 10,
+      "conceptCount": 10
+    },
+    {
+      "id": "authorization-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/authorization-status-cs",
+      "name": "AuthorizationStatusCS",
+      "title": "Authorization Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "bulk-remittance-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/bulk-remittance-status-cs",
+      "name": "BulkRemittanceStatusCS",
+      "title": "Bulk Remittance Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "care-plan-category-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/care-plan-category-cs",
+      "name": "CarePlanCategoryCS",
+      "title": "Care Plan Category CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 15,
+      "conceptCount": 15
+    },
+    {
+      "id": "case-priority",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/case-priority",
+      "name": "CasePriorityCS",
+      "title": "Case Priority",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "civil-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/civil-status-cs",
+      "name": "CivilStatusCS",
+      "title": "Civil Status Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "claim-care-team-role-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-care-team-role-cs",
+      "name": "ClaimCareTeamRoleCS",
+      "title": "Claim Care Team Role Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "claim-expiry-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-expiry-cs",
+      "name": "ClaimExpiryCS",
+      "title": "Claim Expiry Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "claim-information-category-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-information-category-cs",
+      "name": "ClaimInformationCategoryCS",
+      "title": "Claim Information Category Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 14,
+      "conceptCount": 14
+    },
+    {
+      "id": "claim-state-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-state-cs",
+      "name": "ClaimStateCS",
+      "title": "Claim State Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "claim-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-status-cs",
+      "name": "ClaimStatusCS",
+      "title": "Claim Status Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "claim-subtype-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-subtype-cs",
+      "name": "ClaimSubTypeCS",
+      "title": "Claim Subtype Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "claim-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-type-cs",
+      "name": "ClaimTypeCS",
+      "title": "Claim Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "claim-use-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claim-use-cs",
+      "name": "ClaimUseCS",
+      "title": "Claim Use Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "claims-departments-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/claims-departments-cs",
+      "name": "ClaimsDepartmentsCS",
+      "title": "Claims Departments",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 20,
+      "conceptCount": 20
+    },
+    {
+      "id": "condition-category-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-category-cs",
+      "name": "ConditionCategoryCS",
+      "title": "Condition Category CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "condition-clinical-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-clinical-status-cs",
+      "name": "ConditionClinicalStatusCS",
+      "title": "Condition Clinical Status CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "condition-codes-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-codes-cs",
+      "name": "ConditionCodesCS",
+      "title": "Condition Codes Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "not-present",
+      "declaredCount": null,
+      "conceptCount": 0
+    },
+    {
+      "id": "condition-severity-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-severity-cs",
+      "name": "ConditionSeverityCS",
+      "title": "Condition Severity Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "condition-stage-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-stage-cs",
+      "name": "ConditionStageCS",
+      "title": "Condition Stage CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 8,
+      "conceptCount": 8
+    },
+    {
+      "id": "condition-verification-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-verification-status-cs",
+      "name": "ConditionVerificationStatusCS",
+      "title": "Condition Verification Status Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "contact-point-system-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/contact-point-system-cs",
+      "name": "ContactPointSystemCS",
+      "title": "Contact Point System Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "contact-point-use-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/contact-point-use-cs",
+      "name": "ContactPointUseCS",
+      "title": "Contact Point Use Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "copay-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/copay-type-cs",
+      "name": "CopayTypeCS",
+      "title": "Copay Types",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "countries",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/countries",
+      "name": "CountryCodesCS",
+      "title": "Country Codes",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 62,
+      "conceptCount": 62
+    },
+    {
+      "id": "coverage-class-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-class-cs",
+      "name": "CoverageClassCS",
+      "title": "Coverage Class Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "coverage-member-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-member-status-cs",
+      "name": "CoverageMemberStatusCS",
+      "title": "Coverage Member Status Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "coverage-plan-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-plan-type-cs",
+      "name": "CoveragePlanTypeCS",
+      "title": "Coverage Plan Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "coverage-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-type-cs",
+      "name": "CoverageTypeCS",
+      "title": "Coverage Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "diagnosis-kind-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/diagnosis-kind-cs",
+      "name": "DiagnosisKindCS",
+      "title": "Diagnosis Kind",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "diagnosis-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/diagnosis-type-cs",
+      "name": "DiagnosisTypeCS",
+      "title": "Diagnosis Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 12,
+      "conceptCount": 12
+    },
+    {
+      "id": "dosage-additional-instruction-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/dosage-additional-instruction-cs",
+      "name": "DosageAdditionalInstructionCS",
+      "title": "Dosage Additional Instruction Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "dose-units",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/dose-units",
+      "name": "DoseUnitsCS",
+      "title": "Dose Units",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2,
+      "conceptCount": 2
+    },
+    {
+      "id": "encounter-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/encounter-status-cs",
+      "name": "EncounterStatusCS",
+      "title": "Encounter Status Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "encounter-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/encounter-type-cs",
+      "name": "EncounterTypeCS",
+      "title": "Encounter Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "entry-types",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/entry-types",
+      "name": "EntryTypesCS",
+      "title": "Entry Types",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "episode-of-care-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/episode-of-care-status-cs",
+      "name": "EpisodeOfCareStatusCS",
+      "title": "Episode of Care Status Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "episode-of-care-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/episode-of-care-type-cs",
+      "name": "EpisodeOfCareTypeCS",
+      "title": "Episode of Care Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 19,
+      "conceptCount": 19
+    },
+    {
+      "id": "flag-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/flag-type-cs",
+      "name": "FlagTypeCS",
+      "title": "Flag Types",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "formulation-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/formulation-cs",
+      "name": "FormulationCS",
+      "title": "Formulation CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 592,
+      "conceptCount": 592
+    },
+    {
+      "id": "gender-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/gender-cs",
+      "name": "GenderCS",
+      "title": "Gender Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "generic-products-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/generic-products-cs",
+      "name": "GenericProductsCS",
+      "title": "Generic Products Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "not-present",
+      "declaredCount": null,
+      "conceptCount": 0
+    },
+    {
+      "id": "identifier-types-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/identifier-types-cs",
+      "name": "IdentifierTypesCS",
+      "title": "Identifier Types Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 11,
+      "conceptCount": 11
+    },
+    {
+      "id": "identifier-use-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/identifier-use-cs",
+      "name": "IdentifierUseCS",
+      "title": "Identifier Use Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "khts-counties-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/khts-counties-cs",
+      "name": "KHTS_A",
+      "title": "KHTS.A CodeSystem for Counties in Kenya",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "knhts-code-systems-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-code-systems-cs",
+      "name": "PAT_CODESYSTEMS",
+      "title": "CodeSystem for Code systems",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "knhts-contact-relationship-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-contact-relationship-cs",
+      "name": "PT_CONTACTRELATIONSHIP",
+      "title": "CodeSystem for Contact Relationship",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "knhts-identifier-types-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-identifier-types-cs",
+      "name": "PAT_IDENTIFIERTYPES",
+      "title": "CodeSystem for patient's identifier Types",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "knhts-pat-title-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-pat-title-cs",
+      "name": "PT_TITLE",
+      "title": "CodeSystem for patient's title",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "kps-fund-choices-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kps-fund-choices-cs",
+      "name": "KPSFundChoicesCS",
+      "title": "Fund Choices",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "kps-schemes-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kps-schemes-cs",
+      "name": "KPSSchemesCS",
+      "title": "Schemes",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "kps-service-access-point-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kps-service-access-point-cs",
+      "name": "KPSServiceAccessPointCS",
+      "title": "Service Access Point",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "kps-service-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kps-service-type-cs",
+      "name": "KPSServiceTypeCS",
+      "title": "KPS Service Type",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 8,
+      "conceptCount": 8
+    },
+    {
+      "id": "kpsa-client-registration-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpsa-client-registration-codes",
+      "name": "KPSAClientRegistrationCodesCS",
+      "title": "KPS.A Client Registration Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 27,
+      "conceptCount": 27
+    },
+    {
+      "id": "kpsb-clinical-consultation-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpsb-clinical-consultation-codes",
+      "name": "KPSBClinicalConsultationCodesCS",
+      "title": "KPS.B Clinical Consultation Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 80,
+      "conceptCount": 80
+    },
+    {
+      "id": "kpsb-clinical-status-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpsb-clinical-status-codes",
+      "name": "KPSClinicalStatusCodesCS",
+      "title": "KPS.B Clinical Consultation Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "kpsc-diagnostics-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpsc-diagnostics-codes",
+      "name": "KPSCDiagnosticsCodesCS",
+      "title": "KPS.C Diagnostics Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 27,
+      "conceptCount": 27
+    },
+    {
+      "id": "kpsd-treatment-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpsd-treatment-codes",
+      "name": "KPSDTreatmentCodesCS",
+      "title": "KPS.D Treatment Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 25,
+      "conceptCount": 25
+    },
+    {
+      "id": "kpse-immunization-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpse-immunization-codes",
+      "name": "KPSEImmunizationCodesCS",
+      "title": "KPS.E Immunization Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 17,
+      "conceptCount": 17
+    },
+    {
+      "id": "kpsg-referral-codes",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/kpsg-referral-codes",
+      "name": "KPSGReferralCodesCS",
+      "title": "KPS.G Referral Data Elements",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 14,
+      "conceptCount": 14
+    },
+    {
+      "id": "manifestation-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/manifestation-cs",
+      "name": "ManifestationCS",
+      "title": "Manifestation or Symptom CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 30,
+      "conceptCount": 30
+    },
+    {
+      "id": "med-admin-route-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/med-admin-route-cs",
+      "name": "MedAdminRouteCS",
+      "title": "Medication Administration Route CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "medication-admin-status-reason-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/medication-admin-status-reason-cs",
+      "name": "MedicationAdminStatusReasonCS",
+      "title": "MedicationAdministration Status Reason CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "medication-dispense-status-reason-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/medication-dispense-status-reason-cs",
+      "name": "MedicationDispenseStatusReasonCS",
+      "title": "MedicationDispense Status Reason CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "medication-request-priorityCS",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/medication-request-priorityCS",
+      "name": "MedicationRequestPriorityCS",
+      "title": "Medication Request Priority CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2,
+      "conceptCount": 2
+    },
+    {
+      "id": "medication-request-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/medication-request-status-cs",
+      "name": "MedicationRequestStatusCS",
+      "title": "MedicationRequest Status CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "medication-request-status-reason-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/medication-request-status-reason-cs",
+      "name": "MedicationRequestStatusReasonCS",
+      "title": "MedicationRequest Status Reason CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 13,
+      "conceptCount": 13
+    },
+    {
+      "id": "medication-status-reason-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/medication-status-reason-cs",
+      "name": "MedicationStatusReasonCS",
+      "title": "Medication Status Reason Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "name-use-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/name-use-cs",
+      "name": "NameUseCS",
+      "title": "Name Use Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 7,
+      "conceptCount": 7
+    },
+    {
+      "id": "non-edi-claim-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/non-edi-claim-status-cs",
+      "name": "NonEdiClaimStatusCS",
+      "title": "Non-EDI Claim Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "observation-methods-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/observation-methods-cs",
+      "name": "ObservationMethodsCS",
+      "title": "Observation Methods CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 18,
+      "conceptCount": 18
+    },
+    {
+      "id": "payee-type-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/payee-type-cs",
+      "name": "PayeeTypeCS",
+      "title": "Payee Type Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "payment-mechanism-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/payment-mechanism-cs",
+      "name": "PaymentMechanismCS",
+      "title": "Payment Mechanism",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "payment-method-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/payment-method-cs",
+      "name": "PaymentMethodCS",
+      "title": "Payment Method Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "procedure-code-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/procedure-code-cs",
+      "name": "ProcedureCodeCS",
+      "title": "Procedure Code CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 20,
+      "conceptCount": 20
+    },
+    {
+      "id": "process-priority-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/process-priority-cs",
+      "name": "ProcessPriorityCS",
+      "title": "Process Priority Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "questionnaire-category",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/questionnaire-category",
+      "name": "QuestionnaireCategoryCS",
+      "title": "Questionnaire Category",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "reason-medication-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/reason-medication-status-cs",
+      "name": "ReasonMedicationStatusCS",
+      "title": "Reason Medication Status CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 11,
+      "conceptCount": 11
+    },
+    {
+      "id": "related-claim-relationship-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/related-claim-relationship-cs",
+      "name": "RelatedClaimRelationshipCS",
+      "title": "Related Claim Relationship Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "related-person-relationship-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/related-person-relationship-cs",
+      "name": "RelatedPersonRelationshipCS",
+      "title": "Related Person Relationship Code System",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "remittance-choice-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/remittance-choice-cs",
+      "name": "RemittanceChoiceCS",
+      "title": "Remittance Choice",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "remittance-status-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/remittance-status-cs",
+      "name": "RemittanceStatusCS",
+      "title": "Remittance Status",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2,
+      "conceptCount": 2
+    },
+    {
+      "id": "route-of-administration-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/route-of-administration-cs",
+      "name": "RouteOfAdministrationCS",
+      "title": "Route of Administration CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 41,
+      "conceptCount": 41
+    },
+    {
+      "id": "unit-of-measure-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/unit-of-measure-cs",
+      "name": "UnitOfMeasureCS",
+      "title": "Unit of Measure CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 493,
+      "conceptCount": 493
+    },
+    {
+      "id": "usage-frequency-cs",
+      "url": "https://fhir.sha.go.ke/fhir/CodeSystem/usage-frequency-cs",
+      "name": "UsageFrequencyCS",
+      "title": "Usage Frequency",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 4,
+      "conceptCount": 4
+    },
+    {
+      "id": "allergy-reporter",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/ALLERGY-REPORTER",
+      "name": "AllergyReporterCS",
+      "title": "Allergy Reporter",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 1,
+      "conceptCount": 1
+    },
+    {
+      "id": "ambulance-case-rejection-reason",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/AMBULANCE-CASE-REJECTION-REASON",
+      "name": "AmbulanceCaseRejectionReasonCS",
+      "title": "Ambulance Case Rejection Reason",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 9,
+      "conceptCount": 9
+    },
+    {
+      "id": "breathing-state-classification",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/BREATHING-STATE-CLASSIFICATION",
+      "name": "BreathingStateClassificationCS",
+      "title": "Breathing State Classification",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 5,
+      "conceptCount": 5
+    },
+    {
+      "id": "coding-system-source",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/CODING-SYSTEM-SOURCE",
+      "name": "CodingSystemSourceCS",
+      "title": "Coding System Source",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "condition-statuses",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/CONDITION-STATUSES",
+      "name": "ConditionStatusesCS",
+      "title": "Condition Statuses",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 2,
+      "conceptCount": 2
+    },
+    {
+      "id": "medication-administration-route",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/MEDICATION-ADMINISTRATION-ROUTE",
+      "name": "MedicationAdministrationRouteCS",
+      "title": "Medication Administration Route",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "pulse-state-classification",
+      "url": "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/PULSE-STATE-CLASSIFICATION",
+      "name": "PulseStateClassificationCS",
+      "title": "Pulse State Classification",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 6,
+      "conceptCount": 6
+    },
+    {
+      "id": "kpsb-clinical-status",
+      "url": "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-clinical-status",
+      "name": "KPSConditionStatusCS",
+      "title": "KPS Clinical Condition Status CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    },
+    {
+      "id": "kpsb-verification-status",
+      "url": "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-verification-status",
+      "name": "KPSConditionVerificationCS",
+      "title": "KPS Condition Verification CodeSystem",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "complete",
+      "declaredCount": 3,
+      "conceptCount": 3
+    }
+  ],
+  "valueSets": [
+    {
+      "id": "ConditionCategoryVS",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionCategoryVS",
+      "name": "ConditionCategoryVS",
+      "title": "Condition Category Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-category-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 3,
+      "expansionCount": null
+    },
+    {
+      "id": "ConditionClinicalStatusVS",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionClinicalStatusVS",
+      "name": "ConditionClinicalStatusVS",
+      "title": "Condition Clinical Status Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-clinical-status-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 6,
+      "expansionCount": null
+    },
+    {
+      "id": "ConditionVerificationStatusVS",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/ConditionVerificationStatusVS",
+      "name": "ConditionVerificationStatusVS",
+      "title": "Condition Verification Status Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/condition-verification-status-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 6,
+      "expansionCount": null
+    },
+    {
+      "id": "administrative-gender-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender",
+      "name": "AdministrativeGenderVS",
+      "title": "Administrative Gender Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "http://hl7.org/fhir/administrative-gender",
+          "localSystem": false
+        }
+      ],
+      "allSystemsResolveLocally": false,
+      "conceptCount": 0,
+      "expansionCount": null
+    },
+    {
+      "id": "approval-status-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/approval-status-vs",
+      "name": "ApprovalStatusVS",
+      "title": "Approval Status Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/ApprovalStatusCS",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 6,
+      "expansionCount": null
+    },
+    {
+      "id": "encounter-status-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/encounter-status",
+      "name": "EncounterStatusVS",
+      "title": "Encounter Status Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/encounter-status-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 9,
+      "expansionCount": null
+    },
+    {
+      "id": "encounter-type-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/encounter-type",
+      "name": "EncounterTypeVS",
+      "title": "Encounter Type Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/encounter-type-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 6,
+      "expansionCount": null
+    },
+    {
+      "id": "episode-of-care-status-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/episode-of-care-status",
+      "name": "EpisodeOfCareStatusVS",
+      "title": "Episode of Care Status Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/episode-of-care-status-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 7,
+      "expansionCount": null
+    },
+    {
+      "id": "facility-level-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/facility-level-vs",
+      "name": "FacilityLevelVS",
+      "title": "Facility Level Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/FacilityLevelCS",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 7,
+      "expansionCount": null
+    },
+    {
+      "id": "kenya-license-status-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/kenya-license-status",
+      "name": "KenyaLicenseStatusVS",
+      "title": "Kenya License Status Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaLicenseStatus",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 2,
+      "expansionCount": null
+    },
+    {
+      "id": "kenya-regulatory-body-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/kenya-regulatory-body",
+      "name": "KenyaRegulatoryBodyVS",
+      "title": "Kenya Regulatory Body Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaRegulatoryBody",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 12,
+      "expansionCount": null
+    },
+    {
+      "id": "location-type-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/location-type-vs",
+      "name": "LocationTypeVS",
+      "title": "Location Type Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/LocationTypeCS",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 24,
+      "expansionCount": null
+    },
+    {
+      "id": "national-id-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/national-id",
+      "name": "NationalIDVS",
+      "title": "National ID Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/Practitioner/National_ID",
+          "localSystem": false
+        }
+      ],
+      "allSystemsResolveLocally": false,
+      "conceptCount": 0,
+      "expansionCount": null
+    },
+    {
+      "id": "nz-ethnic-group-level-4-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/nz-ethnic-group-level-4",
+      "name": "NZEthnicGroupLevel4VS",
+      "title": "Nationality Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/countries",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 62,
+      "expansionCount": null
+    },
+    {
+      "id": "organization-type-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/organization-type-vs",
+      "name": "OrganizationTypeVS",
+      "title": "Organization Type Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/OrganizationTypeCS",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 230,
+      "expansionCount": null
+    },
+    {
+      "id": "practitioner-registration-number-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registration-number",
+      "name": "PractitionerRegistrationNumberVS",
+      "title": "Practitioner Registration Number Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/Practitioner/PractitionerRegistrationNumber",
+          "localSystem": false
+        }
+      ],
+      "allSystemsResolveLocally": false,
+      "conceptCount": 0,
+      "expansionCount": null
+    },
+    {
+      "id": "practitioner-registry-id-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registry-id",
+      "name": "PractitionerRegistryIDVS",
+      "title": "Practitioner Registry ID Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/Practitioner/PractitionerRegistryID",
+          "localSystem": false
+        }
+      ],
+      "allSystemsResolveLocally": false,
+      "conceptCount": 0,
+      "expansionCount": null
+    },
+    {
+      "id": "practitioner-roles-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-roles",
+      "name": "PractitionerRolesVS",
+      "title": "Practitioner Roles Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/PractitionerRolesCS",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 9,
+      "expansionCount": null
+    },
+    {
+      "id": "practitioner-specialties-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-specialties",
+      "name": "PractitionerSpecialtiesVS",
+      "title": "Practitioner Specialties Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/PractitionerSpecialtiesCS",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 41,
+      "expansionCount": null
+    },
+    {
+      "id": "related-person-relationship-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/related-person-relationship",
+      "name": "RelatedPersonRelationshipVS",
+      "title": "Related Person Relationship Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/related-person-relationship-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 5,
+      "expansionCount": null
+    },
+    {
+      "id": "slade-code-vs",
+      "url": "https://fhir.sha.go.ke/fhir/ValueSet/slade-code",
+      "name": "SladeCodeVS",
+      "title": "Slade Code Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/Practitioner/SladeCode",
+          "localSystem": false
+        }
+      ],
+      "allSystemsResolveLocally": false,
+      "conceptCount": 0,
+      "expansionCount": null
+    },
+    {
+      "id": "episode-of-care-type-vs",
+      "url": "https://fhir.sha.ke/fhir/ValueSet/episode-of-care-type",
+      "name": "EpisodeOfCareTypeVS",
+      "title": "Episode of Care Type Value Set",
+      "version": "1.0.0",
+      "status": "active",
+      "immutable": null,
+      "composeFrom": [
+        {
+          "mode": "include",
+          "system": "https://fhir.sha.go.ke/fhir/CodeSystem/episode-of-care-type-cs",
+          "localSystem": true
+        }
+      ],
+      "allSystemsResolveLocally": true,
+      "conceptCount": 19,
+      "expansionCount": null
+    }
+  ],
+  "namingSystems": [],
+  "capabilityStatements": [],
+  "examples": [],
+  "counts": {
+    "CodeSystem": 124,
+    "ImplementationGuide": 1,
+    "StructureDefinition": 21,
+    "ValueSet": 22
+  },
+  "stats": {
+    "profiles": 21,
+    "extensions": 6,
+    "logicalModels": 0,
+    "bindings": 39,
+    "valueSetsWithUnresolvableSystems": [
+      "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender",
+      "https://fhir.sha.go.ke/fhir/ValueSet/national-id",
+      "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registration-number",
+      "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registry-id",
+      "https://fhir.sha.go.ke/fhir/ValueSet/slade-code"
+    ]
+  }
+}

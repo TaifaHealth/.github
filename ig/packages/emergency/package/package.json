@@ -1,0 +1,35 @@
+{
+  "name" : "fhir.kenyaEmergencyIG",
+  "version" : "0.1.0",
+  "tools-version" : 3,
+  "type" : "IG",
+  "date" : "20260720110159",
+  "license" : "CC0-1.0",
+  "canonical" : "https://nshr-uat.sha.go.ke/fhir",
+  "notForPublication" : true,
+  "url" : "https://build.fhir.org/ig/IntelliSOFT-Consulting/Kenya-Emmergency-FHIR-IG/",
+  "title" : "Kenya Emergency FHIR Implementation Guide",
+  "description" : "FHIR R4 Implementation Guide for Kenya Emergency Medical Services (EMS), developed by the Digital Health Agency (DHA) under the Ministry of Health, Republic of Kenya. This guide defines standardized FHIR profiles, extensions, code systems and value sets to enable interoperable emergency-care data exchange — from dispatch and ambulance response through point-of-care treatment and facility handover — across Kenya's emergency response ecosystem and the Social Health Authority (SHA) claims system. (built Mon, Jul 20, 2026 11:01+0000+00:00)",
+  "fhirVersions" : ["4.0.1"],
+  "dependencies" : {
+    "hl7.fhir.r4.core" : "4.0.1",
+    "hl7.terminology.r4" : "7.2.0",
+    "hl7.fhir.uv.extensions.r4" : "5.3.0"
+  },
+  "author" : "Digital Health Agency (DHA), Kenya",
+  "maintainers" : [{
+    "name" : "Digital Health Agency (DHA), Kenya",
+    "email" : "info@dha.go.ke",
+    "url" : "https://dha.go.ke"
+  },
+  {
+    "name" : "Digital Health Agency Kenya – FHIR Team",
+    "email" : "info@dha.go.ke",
+    "url" : "https://dha.go.ke"
+  }],
+  "directories" : {
+    "lib" : "package",
+    "example" : "example"
+  },
+  "jurisdiction" : "urn:iso:std:iso:3166#KE"
+}

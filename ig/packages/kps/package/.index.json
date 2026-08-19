@@ -1,0 +1,3194 @@
+{
+  "index-version" : 2,
+  "files" : [{
+    "filename" : "ImplementationGuide-ke.fhir.patient-summary.json",
+    "resourceType" : "ImplementationGuide",
+    "id" : "ke.fhir.patient-summary",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ImplementationGuide/ke.fhir.patient-summary",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "CapabilityStatement-KPSFHIRIGCapabilityStatement.json",
+    "resourceType" : "CapabilityStatement",
+    "id" : "KPSFHIRIGCapabilityStatement",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CapabilityStatement/KPSFHIRIGCapabilityStatement",
+    "version" : "0.1.0",
+    "kind" : "requirements"
+  },
+  {
+    "filename" : "CodeSystem-ClaimDiagnosisCodeableConceptCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ClaimDiagnosisCodeableConceptCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/ClaimDiagnosisCodeableConceptCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ExclusionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ExclusionCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/ExclusionCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaBodySiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaBodySiteCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/KenyaBodySiteCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSocialHealthAuthorityInterventionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSocialHealthAuthorityInterventionCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/KenyaSocialHealthAuthorityInterventionCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSubSiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSubSiteCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/KenyaSubSiteCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-PreAuthExclusionsCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "PreAuthExclusionsCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/PreAuthExclusionsCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-WaiverTypeCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "WaiverTypeCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/WaiverTypeCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-active-components-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "active-components-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/active-components-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "additional-instruction-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/additional-instruction-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-address-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "address-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/address-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-adjudication-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "adjudication-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/adjudication-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-adjustment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "adjustment-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/adjustment-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administration-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administration-method-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/administration-method-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administrative-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administrative-gender-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/administrative-gender-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-allergy-reporter.json",
+    "resourceType" : "CodeSystem",
+    "id" : "allergy-reporter",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/allergy-reporter",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ambulance-case-rejection-reason.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ambulance-case-rejection-reason",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/ambulance-case-rejection-reason",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ambulance-case-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ambulance-case-status",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/ambulance-case-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-annual-quantity-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "annual-quantity-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/annual-quantity-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-approach-site-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "approach-site-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/approach-site-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-as-needed-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "as-needed-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/as-needed-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-assessment-types.json",
+    "resourceType" : "CodeSystem",
+    "id" : "assessment-types",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/assessment-types",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-attachment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "attachment-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/attachment-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-auth-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "auth-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/auth-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-authorization-failure-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "authorization-failure-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/authorization-failure-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-authorization-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "authorization-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/authorization-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-breathing-state-classification.json",
+    "resourceType" : "CodeSystem",
+    "id" : "breathing-state-classification",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/breathing-state-classification",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-bulk-remittance-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "bulk-remittance-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/bulk-remittance-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-care-plan-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "care-plan-category-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/care-plan-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-case-priority.json",
+    "resourceType" : "CodeSystem",
+    "id" : "case-priority",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/case-priority",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-civil-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "civil-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/civil-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-care-team-role-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-care-team-role-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-care-team-role-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-expiry-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-expiry-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-expiry-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-information-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-information-category-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-information-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-state-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-state-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-state-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-subtype-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-subtype-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-subtype-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claim-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claims-departments-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claims-departments-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/claims-departments-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coding-system-source.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coding-system-source",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/coding-system-source",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-category-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/condition-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-clinical-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-clinical-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/condition-clinical-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-severity-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-severity-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/condition-severity-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-stage-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-stage-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/condition-stage-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-statuses.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-statuses",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/condition-statuses",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-verification-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-verification-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/condition-verification-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-system-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-system-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/contact-point-system-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/contact-point-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-copay-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "copay-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/copay-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-class-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-class-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/coverage-class-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-member-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-member-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/coverage-member-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-plan-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-plan-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/coverage-plan-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/coverage-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-diagnosis-kind-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "diagnosis-kind-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/diagnosis-kind-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-diagnosis-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "diagnosis-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/diagnosis-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dosage-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dosage-additional-instruction-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/dosage-additional-instruction-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dose-units.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dose-units",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/dose-units",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-encounter-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "encounter-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/encounter-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-entry-types.json",
+    "resourceType" : "CodeSystem",
+    "id" : "entry-types",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/entry-types",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/episode-of-care-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/episode-of-care-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-flag-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "flag-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/flag-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-formulation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "formulation-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/formulation-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "gender-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/gender-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-generic-products-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "generic-products-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/generic-products-cs",
+    "version" : "0.1.0",
+    "content" : "not-present"
+  },
+  {
+    "filename" : "CodeSystem-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-types-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/identifier-types-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-identifier-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/identifier-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-investigations-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "investigations-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/investigations-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-khts-counties-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "khts-counties-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/khts-counties-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clm-sts-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clm-sts-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clm-sts-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clms-accomodation-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clms-accomodation-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clms-accomodation-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clms-disp-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clms-disp-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clms-disp-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clms-rsp-sts-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clms-rsp-sts-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clms-rsp-sts-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clms-sb-typs-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clms-sb-typs-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clms-sb-typs-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clms-typs-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clms-typs-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clms-typs-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-clms-zone-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-clms-zone-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-clms-zone-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-code-systems-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-code-systems-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-code-systems-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-contact-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-contact-relationship-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-contact-relationship-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-identifier-types-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-identifier-types-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-pat-title-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-pat-title-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/knhts-pat-title-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-acquisition-modality-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-acquisition-modality-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-acquisition-modality-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-data-elements.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-data-elements",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-data-elements",
+    "version" : "0.1.0",
+    "content" : "fragment"
+  },
+  {
+    "filename" : "CodeSystem-kps-event-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-event-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-event-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-fund-choices-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-fund-choices-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-fund-choices-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-medication-atc-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-medication-atc-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-medication-atc-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-procedures-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-procedures-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-procedures-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-schemes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-schemes-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-schemes-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-service-access-point-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-service-access-point-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-service-access-point-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-service-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-service-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-service-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-substances-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-substances-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-substances-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-target-diseases-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-target-diseases-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-target-diseases-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-vaccine-atc-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-vaccine-atc-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kps-vaccine-atc-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsa-client-registration-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsa-client-registration-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsa-client-registration-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-consultation-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-consultation-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsb-clinical-consultation-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-status-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-status-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsb-clinical-status-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-status",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsb-clinical-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-verification-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-verification-status",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsb-verification-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsc-diagnostics-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsc-diagnostics-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsc-diagnostics-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsd-treatment-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsd-treatment-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsd-treatment-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpse-immunization-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpse-immunization-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpse-immunization-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsg-referral-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsg-referral-codes",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/kpsg-referral-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ksp-investigation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ksp-investigation-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/ksp-investigation-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-manifestation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "manifestation-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/manifestation-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-med-admin-route-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "med-admin-route-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/med-admin-route-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-admin-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-admin-status-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-admin-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-administration-route.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-administration-route",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-administration-route",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-dispense-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-dispense-status-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-dispense-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-priorityCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-priorityCS",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-request-priorityCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-request-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-status-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-request-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-status-reason-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/medication-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-name-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "name-use-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/name-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-non-edi-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "non-edi-claim-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/non-edi-claim-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-observation-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "observation-category-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/observation-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-observation-methods-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "observation-methods-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/observation-methods-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payee-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payee-type-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/payee-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-mechanism-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-mechanism-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/payment-mechanism-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-method-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/payment-method-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-procedure-code-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "procedure-code-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/procedure-code-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-process-priority-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "process-priority-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/process-priority-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-pulse-state-classification.json",
+    "resourceType" : "CodeSystem",
+    "id" : "pulse-state-classification",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/pulse-state-classification",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-questionnaire-category.json",
+    "resourceType" : "CodeSystem",
+    "id" : "questionnaire-category",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/questionnaire-category",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-reaction-event-severity-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "reaction-event-severity-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/reaction-event-severity-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-reason-medication-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "reason-medication-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/reason-medication-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-related-claim-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "related-claim-relationship-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/related-claim-relationship-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-remittance-choice-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "remittance-choice-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/remittance-choice-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-remittance-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "remittance-status-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/remittance-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-route-of-administration-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "route-of-administration-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/route-of-administration-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-unit-of-measure-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "unit-of-measure-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/unit-of-measure-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-usage-frequency-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "usage-frequency-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/usage-frequency-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-vital-signs-loinc-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "vital-signs-loinc-cs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/vital-signs-loinc-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "NamingSystem-BirthCertificateIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "BirthCertificateIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-NationalIdIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "NationalIdIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-OrganizationIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "OrganizationIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-PassportIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "PassportIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-PractitionerIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "PractitionerIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-PractitionerRoleIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "PractitionerRoleIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-UpiIdentifierNamingSystem.json",
+    "resourceType" : "NamingSystem",
+    "id" : "UpiIdentifierNamingSystem",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "StructureDefinition-ClientRegistrationModel.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ClientRegistrationModel",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ClientRegistrationModel",
+    "version" : "0.1.0",
+    "kind" : "logical",
+    "type" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ClientRegistrationModel",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-ClientTreatmentModel.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ClientTreatmentModel",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ClientTreatmentModel",
+    "version" : "0.1.0",
+    "kind" : "logical",
+    "type" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ClientTreatmentModel",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-ClinicalConsultationModel.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ClinicalConsultationModel",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ClinicalConsultationModel",
+    "version" : "0.1.0",
+    "kind" : "logical",
+    "type" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ClinicalConsultationModel",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-DiagnosticsModel.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "DiagnosticsModel",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/DiagnosticsModel",
+    "version" : "0.1.0",
+    "kind" : "logical",
+    "type" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/DiagnosticsModel",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-ImmunizationRecord.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ImmunizationRecord",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ImmunizationRecord",
+    "version" : "0.1.0",
+    "kind" : "logical",
+    "type" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ImmunizationRecord",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-collection-context.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "collection-context",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/collection-context",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-communication-preference.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "communication-preference",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/communication-preference",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-insurance-information.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "insurance-information",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/insurance-information",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-allergy-intolerance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-allergy-intolerance",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-allergy-intolerance",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "AllergyIntolerance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-composition.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-composition",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-composition",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Composition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-condition.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-condition",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-condition",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Condition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-diagnostic-report.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-diagnostic-report",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-diagnostic-report",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "DiagnosticReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-encounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-encounter",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-encounter",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Encounter",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-imaging-study.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-imaging-study",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-imaging-study",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "ImagingStudy",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-immunization.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-immunization",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-immunization",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Immunization",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-location.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-location",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-location",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Location",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-medication-request.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-medication-request",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-medication-request",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "MedicationRequest",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-medication-statement.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-medication-statement",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-medication-statement",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "MedicationStatement",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-medication.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-medication",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-medication",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Medication",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-observation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-observation",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-observation",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-organization.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-organization",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-organization",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Organization",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-patient.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-patient",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-patient",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Patient",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-practitioner-role.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-practitioner-role",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-practitioner-role",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "PractitionerRole",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-practitioner.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-practitioner",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-practitioner",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Practitioner",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-procedure.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-procedure",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-procedure",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Procedure",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-service-request.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-service-request",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-service-request",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "ServiceRequest",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-specimen.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-specimen",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-specimen",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Specimen",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-kps-substance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-kps-substance",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/ke-kps-substance",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Substance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-counties-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-counties-extension",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/kenya-counties-extension",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-medication-brand-name.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "medication-brand-name",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/medication-brand-name",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-patient-title.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "patient-title",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/patient-title",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-procedure-type-category.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "procedure-type-category",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/procedure-type-category",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-referral-direction.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "referral-direction",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/referral-direction",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-referral-source.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "referral-source",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/referral-source",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-specimen-priority.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "specimen-priority",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/StructureDefinition/specimen-priority",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "ValueSet-administrative-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "administrative-gender-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/administrative-gender-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-clinical-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-clinical-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-clinical-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-criticality-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-criticality-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-criticality-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-reaction-manifestation-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-reaction-manifestation-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-reaction-manifestation-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-reaction-severity-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-reaction-severity-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-reaction-severity-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-reaction-substance-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-reaction-substance-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-reaction-substance-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-intolerance-verification-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-intolerance-verification-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/allergy-intolerance-verification-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-care-plan-activity-detail-kind-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "care-plan-activity-detail-kind-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/care-plan-activity-detail-kind-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-care-plan-activity-detail-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "care-plan-activity-detail-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/care-plan-activity-detail-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-care-plan-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "care-plan-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/care-plan-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-care-plan-intent-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "care-plan-intent-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/care-plan-intent-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-care-plan-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "care-plan-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/care-plan-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-diagnosis-diagnosis-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-diagnosis-diagnosis-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-diagnosis-diagnosis-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-item-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-item-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-item-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-item-net-currency-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-item-net-currency-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-item-net-currency-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-item-product-or-service-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-item-product-or-service-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-item-product-or-service-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-item-unit-price-currency-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-item-unit-price-currency-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-item-unit-price-currency-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-priority-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-response-item-adjudication-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-response-item-adjudication-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-response-item-adjudication-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-response-outcome-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-response-outcome-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-response-outcome-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-response-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-response-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-response-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-response-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-response-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-response-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-response-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-response-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-response-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claim-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claim-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claim-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claims-response-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claims-response-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claims-response-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-claims-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "claims-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/claims-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-clinical-impression-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "clinical-impression-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/clinical-impression-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-clinical-impression-finding-item-codeable-concept-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "clinical-impression-finding-item-codeable-concept-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/clinical-impression-finding-item-codeable-concept-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-clinical-impression-investigation-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "clinical-impression-investigation-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/clinical-impression-investigation-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-clinical-impression-prognosis-codeable-concept-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "clinical-impression-prognosis-codeable-concept-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/clinical-impression-prognosis-codeable-concept-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-clinical-impression-status-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "clinical-impression-status-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/clinical-impression-status-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-clinical-impression-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "clinical-impression-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/clinical-impression-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-attester-mode-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-attester-mode-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-attester-mode-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-confidentiality-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-confidentiality-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-confidentiality-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-event-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-event-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-event-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-relates-to-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-relates-to-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-relates-to-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-section-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-section-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-section-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-section-empty-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-section-empty-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-section-empty-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-section-mode-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-section-mode-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-section-mode-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-section-ordered-by-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-section-ordered-by-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-section-ordered-by-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-composition-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "composition-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/composition-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-body-site-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-body-site-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/condition-body-site-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/condition-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-clinical-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-clinical-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/condition-clinical-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/condition-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-severity-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-severity-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/condition-severity-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-verification-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-verification-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/condition-verification-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-policy-rule-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-policy-rule-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-policy-rule-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-action-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-action-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-action-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-actor-role-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-actor-role-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-actor-role-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-class-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-class-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-class-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-data-meaning-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-data-meaning-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-data-meaning-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-purpose-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-purpose-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-purpose-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-security-label-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-security-label-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-security-label-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-provision-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-provision-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-provision-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-scope-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-scope-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-scope-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-consent-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "consent-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/consent-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-class-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-class-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-class-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-cost-to-beneficiary-exception-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-cost-to-beneficiary-exception-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-cost-to-beneficiary-exception-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-cost-to-beneficiary-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-cost-to-beneficiary-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-cost-to-beneficiary-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-item-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-item-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-item-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-item-diagnosis-diagnosis-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-item-diagnosis-diagnosis-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-item-diagnosis-diagnosis-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-item-modifier-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-item-modifier-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-item-modifier-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-item-product-or-service-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-item-product-or-service-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-item-product-or-service-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-priority-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-purpose-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-purpose-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-purpose-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-request-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-request-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-request-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-response-outcome-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-response-outcome-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-response-outcome-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-response-purpose-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-response-purpose-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-response-purpose-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-eligibility-response-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-eligibility-response-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-eligibility-response-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-relationship-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-relationship-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-relationship-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coverage-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coverage-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/coverage-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-diagnostic-report-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "diagnostic-report-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/diagnostic-report-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-diagnostic-report-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "diagnostic-report-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/diagnostic-report-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-diagnostic-report-conclusion-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "diagnostic-report-conclusion-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/diagnostic-report-conclusion-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-diagnostic-report-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "diagnostic-report-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/diagnostic-report-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-content-format-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-content-format-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-content-format-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-context-event-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-context-event-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-context-event-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-context-facility-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-context-facility-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-context-facility-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-context-practice-setting-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-context-practice-setting-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-context-practice-setting-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-doc-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-doc-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-doc-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-relates-to-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-relates-to-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-relates-to-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-security-label-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-security-label-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-security-label-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-document-reference-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "document-reference-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/document-reference-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-encounter-class-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "encounter-class-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/encounter-class-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-encounter-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "encounter-priority-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/encounter-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-encounter-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "encounter-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/encounter-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-family-member-history-condition-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "family-member-history-condition-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/family-member-history-condition-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-family-member-history-condition-outcome-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "family-member-history-condition-outcome-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/family-member-history-condition-outcome-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-family-member-history-data-absent-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "family-member-history-data-absent-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/family-member-history-data-absent-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-family-member-history-reason-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "family-member-history-reason-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/family-member-history-reason-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-family-member-history-relationship-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "family-member-history-relationship-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/family-member-history-relationship-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-family-member-history-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "family-member-history-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/family-member-history-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-immunization-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "immunization-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/immunization-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-immunization-target-disease-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "immunization-target-disease-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/immunization-target-disease-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-immunization-vaccine-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "immunization-vaccine-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/immunization-vaccine-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kenya-counties-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kenya-counties-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kenya-counties-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-acquisition-modality-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-acquisition-modality-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-acquisition-modality-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-adjustment-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-adjustment-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-adjustment-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-allergy-certainty-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-allergy-certainty-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-allergy-certainty-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-allergy-severity-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-allergy-severity-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-allergy-severity-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-allergy-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-allergy-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-allergy-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-allergy-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-allergy-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-allergy-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-annual-quantity-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-annual-quantity-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-annual-quantity-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-auth-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-auth-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-auth-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-authorization-failure-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-authorization-failure-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-authorization-failure-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-authorization-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-authorization-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-authorization-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-bulk-remittance-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-bulk-remittance-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-bulk-remittance-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-claims-departments-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-claims-departments-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-claims-departments-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-communication-preference-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-communication-preference-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-communication-preference-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-copay-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-copay-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-copay-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-diagnosis-kind-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-diagnosis-kind-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-diagnosis-kind-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-diagnostic-service-sections-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-diagnostic-service-sections-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-diagnostic-service-sections-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-episode-of-care-diagnosis-role-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-episode-of-care-diagnosis-role-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-episode-of-care-diagnosis-role-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-episode-of-care-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-episode-of-care-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-episode-of-care-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-episode-of-care-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-episode-of-care-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-episode-of-care-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-family-member-history-sex-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-family-member-history-sex-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-family-member-history-sex-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-flag-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-flag-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-flag-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-fund-choices-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-fund-choices-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-fund-choices-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-gender-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-gender-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-generic-products-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-generic-products-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-generic-products-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-investigations-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-investigations-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-investigations-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-medication-form-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-medication-form-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-medication-form-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-medication-request-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-medication-request-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-medication-request-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-medication-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-medication-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-medication-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-non-edi-claim-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-non-edi-claim-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-non-edi-claim-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-organization-identifier-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-organization-identifier-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-organization-identifier-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-organization-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-organization-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-organization-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-address-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-address-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-address-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-contact-relationship-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-contact-relationship-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-contact-relationship-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-gender-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-gender-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-identifier-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-identifier-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-identifier-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-identifier-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-identifier-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-identifier-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-link-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-link-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-link-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-marital-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-marital-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-marital-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-name-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-name-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-name-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-telecom-system-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-telecom-system-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-telecom-system-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-patient-telecom-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-patient-telecom-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-patient-telecom-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-payment-mechanism-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-payment-mechanism-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-payment-mechanism-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-payment-notice-payment-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-payment-notice-payment-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-payment-notice-payment-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-payment-notice-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-payment-notice-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-payment-notice-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-practitioner-identifier-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-practitioner-identifier-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-practitioner-identifier-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-practitioner-identifier-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-practitioner-identifier-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-practitioner-identifier-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-practitioner-name-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-practitioner-name-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-practitioner-name-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-radiology-codes-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-radiology-codes-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-radiology-codes-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-referral-direction-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-referral-direction-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-referral-direction-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-referral-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-referral-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-referral-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-referral-source-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-referral-source-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-referral-source-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-remittance-choice-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-remittance-choice-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-remittance-choice-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-remittance-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-remittance-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-remittance-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-schemes-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-schemes-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-schemes-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-service-access-point-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-service-access-point-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-service-access-point-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-service-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-service-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-service-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-substance-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-substance-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-substance-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-ucum-units-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-ucum-units-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-ucum-units-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-unit-of-measure-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-unit-of-measure-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-unit-of-measure-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-usage-frequency-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-usage-frequency-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-usage-frequency-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-vital-signs-codes-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-vital-signs-codes-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-vital-signs-codes-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-kps-vital-signs-units-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kps-vital-signs-units-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/kps-vital-signs-units-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-additional-instruction-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-additional-instruction-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-additional-instruction-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-as-needed-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-as-needed-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-as-needed-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-dose-rate-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-dose-rate-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-dose-rate-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-medication-codeable-concept-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-medication-codeable-concept-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-medication-codeable-concept-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-medication-codeable-concept-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-medication-codeable-concept-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-medication-codeable-concept-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-medication-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-medication-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-medication-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-method-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-method-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-method-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-route-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-route-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-route-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-site-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-site-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-site-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-dispense-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-dispense-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-dispense-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-form-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-form-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-form-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-ingredient-denominator-comparator-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-ingredient-denominator-comparator-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-ingredient-denominator-comparator-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-ingredient-denominator-unit-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-ingredient-denominator-unit-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-ingredient-denominator-unit-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-ingredient-numerator-comparator-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-ingredient-numerator-comparator-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-ingredient-numerator-comparator-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-ingredient-numerator-unit-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-ingredient-numerator-unit-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-ingredient-numerator-unit-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-as-needed-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-as-needed-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-as-needed-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-dispense-quantity-unit-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-dispense-quantity-unit-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-dispense-quantity-unit-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-dose-quantity-unit-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-dose-quantity-unit-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-dose-quantity-unit-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-dose-range-high-unit-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-dose-range-high-unit-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-dose-range-high-unit-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-dose-range-low-unit-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-dose-range-low-unit-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-dose-range-low-unit-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-intent-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-intent-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-intent-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-medication-codeable-concept-coding-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-medication-codeable-concept-coding-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-medication-codeable-concept-coding-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-medication-codeable-concept-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-medication-codeable-concept-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-medication-codeable-concept-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-medication-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-medication-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-medication-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-priority-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-reason-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-reason-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-reason-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-route-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-route-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-route-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-substitution-allowed-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-substitution-allowed-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-substitution-allowed-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-request-substitution-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-request-substitution-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-request-substitution-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-statement-medication-codeable-concept-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-statement-medication-codeable-concept-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-statement-medication-codeable-concept-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-statement-medication-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-statement-medication-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-statement-medication-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-statement-reason-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-statement-reason-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-statement-reason-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-statement-status-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-statement-status-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-statement-status-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-statement-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-statement-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-statement-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/medication-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-observation-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "observation-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/observation-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-observation-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "observation-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/observation-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-observation-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "observation-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/observation-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-organization-address-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "organization-address-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/organization-address-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-organization-identifier-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "organization-identifier-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/organization-identifier-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-organization-identifier-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "organization-identifier-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/organization-identifier-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-organization-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "organization-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/organization-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-patient-title-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "patient-title-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/patient-title-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-address-use-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-address-use-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/practitioner-address-use-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-gender-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/practitioner-gender-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-role-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-role-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/practitioner-role-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-telecom-system-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-telecom-system-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/practitioner-telecom-system-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-procedure-body-site-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "procedure-body-site-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/procedure-body-site-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-procedure-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "procedure-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/procedure-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-procedure-outcome-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "procedure-outcome-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/procedure-outcome-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-procedure-reason-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "procedure-reason-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/procedure-reason-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-procedure-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "procedure-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/procedure-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-category-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-intent-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-intent-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-intent-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-location-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-location-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-location-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-priority-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-reason-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-service-request-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "service-request-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/service-request-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-collection-body-site-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-collection-body-site-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-collection-body-site-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-collection-fasting-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-collection-fasting-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-collection-fasting-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-collection-method-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-collection-method-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-collection-method-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-condition-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-condition-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-condition-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-container-additive-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-container-additive-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-container-additive-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-container-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-container-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-container-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-processing-procedure-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-processing-procedure-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-processing-procedure-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-specimen-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "specimen-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/specimen-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-task-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "task-code-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/task-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-task-intent-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "task-intent-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/task-intent-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-task-performer-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "task-performer-type-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/task-performer-type-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-task-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "task-priority-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/task-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-task-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "task-status-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/task-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-ucum-units-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "ucum-units-vs",
+    "url" : "https://fhir.dha.go.ke/ig/patient-summary/ValueSet/ucum-units-vs",
+    "version" : "0.1.0"
+  }]
+}

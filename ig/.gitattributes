@@ -1,0 +1,8 @@
+# The vendored packages are verbatim copies of the upstream tarballs, and the
+# sha256 values in PINS.md are of those tarballs. With core.autocrlf=input
+# (common on this team's machines) git would rewrite the CRLF line endings in
+# the packages' Schematron files on the way into the index, and a fresh clone
+# would then no longer byte-match what was pinned. Turn all normalisation off
+# for the vendored trees so the claim in PINS.md and README.md stays true.
+packages/** -text
+dist/*.tgz binary

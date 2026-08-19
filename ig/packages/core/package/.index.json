@@ -1,0 +1,1366 @@
+{
+  "index-version" : 2,
+  "files" : [{
+    "filename" : "ImplementationGuide-kenya.fhir.core.json",
+    "resourceType" : "ImplementationGuide",
+    "id" : "kenya.fhir.core",
+    "url" : "https://fhir.sha.go.ke/fhir/ImplementationGuide/kenya.fhir.core",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "CodeSystem-ApprovalStatusCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ApprovalStatusCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/ApprovalStatusCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ClaimDiagnosisCodeableConceptCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ClaimDiagnosisCodeableConceptCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/ClaimDiagnosisCodeableConceptCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ExclusionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ExclusionCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/ExclusionCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-FacilityIdentifierTypesCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "FacilityIdentifierTypesCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/FacilityIdentifierTypesCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-FacilityLevelCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "FacilityLevelCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/FacilityLevelCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaBodySiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaBodySiteCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaBodySiteCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaLicenseStatus.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaLicenseStatus",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaLicenseStatus",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaRegulatoryBody.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaRegulatoryBody",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaRegulatoryBody",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSocialHealthAuthorityInterventionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSocialHealthAuthorityInterventionCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaSocialHealthAuthorityInterventionCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSubSiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSubSiteCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/KenyaSubSiteCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-LocationTypeCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "LocationTypeCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/LocationTypeCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-OrganizationTypeCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "OrganizationTypeCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/OrganizationTypeCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-PractitionerRolesCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "PractitionerRolesCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/PractitionerRolesCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-PractitionerSpecialtiesCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "PractitionerSpecialtiesCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/PractitionerSpecialtiesCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-PreAuthExclusionsCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "PreAuthExclusionsCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/PreAuthExclusionsCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-WaiverTypeCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "WaiverTypeCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/WaiverTypeCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-active-components-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "active-components-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/active-components-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "additional-instruction-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/additional-instruction-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-address-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "address-use-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/address-use-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-adjudication-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "adjudication-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/adjudication-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-adjustment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "adjustment-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/adjustment-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administration-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administration-method-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/administration-method-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administrative-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administrative-gender-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/administrative-gender-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-allergy-reporter.json",
+    "resourceType" : "CodeSystem",
+    "id" : "allergy-reporter",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/ALLERGY-REPORTER",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ambulance-case-rejection-reason.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ambulance-case-rejection-reason",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/AMBULANCE-CASE-REJECTION-REASON",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ambulance-case-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ambulance-case-status",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/ambulance-case-status",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-annual-quantity-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "annual-quantity-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/annual-quantity-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-approach-site-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "approach-site-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/approach-site-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-as-needed-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "as-needed-reason-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/as-needed-reason-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-assessment-types.json",
+    "resourceType" : "CodeSystem",
+    "id" : "assessment-types",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/assessment-types",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-attachment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "attachment-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/attachment-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-auth-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "auth-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/auth-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-authorization-failure-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "authorization-failure-reason-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/authorization-failure-reason-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-authorization-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "authorization-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/authorization-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-breathing-state-classification.json",
+    "resourceType" : "CodeSystem",
+    "id" : "breathing-state-classification",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/BREATHING-STATE-CLASSIFICATION",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-bulk-remittance-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "bulk-remittance-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/bulk-remittance-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-care-plan-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "care-plan-category-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/care-plan-category-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-case-priority.json",
+    "resourceType" : "CodeSystem",
+    "id" : "case-priority",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/case-priority",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-civil-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "civil-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/civil-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-care-team-role-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-care-team-role-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-care-team-role-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-expiry-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-expiry-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-expiry-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-information-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-information-category-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-information-category-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-state-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-state-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-state-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-subtype-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-subtype-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-subtype-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-use-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claim-use-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claims-departments-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claims-departments-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/claims-departments-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coding-system-source.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coding-system-source",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/CODING-SYSTEM-SOURCE",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-category-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/condition-category-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-clinical-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-clinical-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/condition-clinical-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-codes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-codes-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/condition-codes-cs",
+    "version" : "1.0.0",
+    "content" : "not-present"
+  },
+  {
+    "filename" : "CodeSystem-condition-severity-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-severity-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/condition-severity-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-stage-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-stage-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/condition-stage-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-statuses.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-statuses",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/CONDITION-STATUSES",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-verification-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-verification-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/condition-verification-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-system-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-system-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/contact-point-system-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-use-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/contact-point-use-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-copay-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "copay-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/copay-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-countries.json",
+    "resourceType" : "CodeSystem",
+    "id" : "countries",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/countries",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-class-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-class-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-class-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-member-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-member-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-member-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-plan-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-plan-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-plan-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/coverage-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-diagnosis-kind-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "diagnosis-kind-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/diagnosis-kind-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-diagnosis-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "diagnosis-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/diagnosis-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dosage-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dosage-additional-instruction-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/dosage-additional-instruction-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dose-units.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dose-units",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/dose-units",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-encounter-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "encounter-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/encounter-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-encounter-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "encounter-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/encounter-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-entry-types.json",
+    "resourceType" : "CodeSystem",
+    "id" : "entry-types",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/entry-types",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/episode-of-care-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/episode-of-care-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-flag-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "flag-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/flag-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-formulation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "formulation-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/formulation-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "gender-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/gender-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-generic-products-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "generic-products-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/generic-products-cs",
+    "version" : "1.0.0",
+    "content" : "not-present"
+  },
+  {
+    "filename" : "CodeSystem-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-types-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/identifier-types-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-identifier-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-use-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/identifier-use-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-khts-counties-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "khts-counties-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/khts-counties-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-code-systems-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-code-systems-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-code-systems-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-contact-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-contact-relationship-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-contact-relationship-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-identifier-types-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-identifier-types-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-pat-title-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-pat-title-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/knhts-pat-title-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-fund-choices-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-fund-choices-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kps-fund-choices-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-schemes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-schemes-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kps-schemes-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-service-access-point-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-service-access-point-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kps-service-access-point-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-service-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-service-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kps-service-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsa-client-registration-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsa-client-registration-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpsa-client-registration-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-consultation-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-consultation-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpsb-clinical-consultation-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-status-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-status-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpsb-clinical-status-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-clinical-status",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-verification-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-verification-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-verification-status",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsc-diagnostics-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsc-diagnostics-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpsc-diagnostics-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsd-treatment-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsd-treatment-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpsd-treatment-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpse-immunization-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpse-immunization-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpse-immunization-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsg-referral-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsg-referral-codes",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/kpsg-referral-codes",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-manifestation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "manifestation-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/manifestation-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-med-admin-route-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "med-admin-route-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/med-admin-route-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-admin-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-admin-status-reason-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/medication-admin-status-reason-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-administration-route.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-administration-route",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/MEDICATION-ADMINISTRATION-ROUTE",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-dispense-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-dispense-status-reason-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/medication-dispense-status-reason-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-priorityCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-priorityCS",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/medication-request-priorityCS",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/medication-request-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-status-reason-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/medication-request-status-reason-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-status-reason-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/medication-status-reason-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-name-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "name-use-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/name-use-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-non-edi-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "non-edi-claim-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/non-edi-claim-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-observation-methods-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "observation-methods-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/observation-methods-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payee-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payee-type-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/payee-type-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-mechanism-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-mechanism-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/payment-mechanism-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-method-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/payment-method-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-procedure-code-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "procedure-code-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/procedure-code-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-process-priority-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "process-priority-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/process-priority-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-pulse-state-classification.json",
+    "resourceType" : "CodeSystem",
+    "id" : "pulse-state-classification",
+    "url" : "https://ilm-hie.dha.go.ke/ocl/orgs/MOH-KENYA/CodeSystem/PULSE-STATE-CLASSIFICATION",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-questionnaire-category.json",
+    "resourceType" : "CodeSystem",
+    "id" : "questionnaire-category",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/questionnaire-category",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-reason-medication-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "reason-medication-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/reason-medication-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-related-claim-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "related-claim-relationship-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/related-claim-relationship-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-related-person-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "related-person-relationship-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/related-person-relationship-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-remittance-choice-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "remittance-choice-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/remittance-choice-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-remittance-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "remittance-status-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/remittance-status-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-route-of-administration-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "route-of-administration-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/route-of-administration-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-unit-of-measure-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "unit-of-measure-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/unit-of-measure-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-usage-frequency-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "usage-frequency-cs",
+    "url" : "https://fhir.sha.go.ke/fhir/CodeSystem/usage-frequency-cs",
+    "version" : "1.0.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "StructureDefinition-KenyaCoreOrganization.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "KenyaCoreOrganization",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/KenyaCoreOrganization",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Organization",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-approval-status-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "approval-status-extension",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/approval-status-extension",
+    "version" : "1.0.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-facility-level-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "facility-level-extension",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/facility-level-extension",
+    "version" : "1.0.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-allergyintolerance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-allergyintolerance",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-allergyintolerance",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "AllergyIntolerance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-condition.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-condition",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-condition",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Condition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-diagnosticreport.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-diagnosticreport",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-diagnosticreport",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "DiagnosticReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-documentreference.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-documentreference",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-documentreference",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "DocumentReference",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-encounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-encounter",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-encounter",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Encounter",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-episodeofcare.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-episodeofcare",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-episodeofcare",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "EpisodeOfCare",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-location.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-location",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-location",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Location",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-observation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-observation",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-observation",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-patient.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-patient",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-patient",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Patient",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-practitionerrole.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-practitionerrole",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-practitionerrole",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "PractitionerRole",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-procedure.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-procedure",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-procedure",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Procedure",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-questionnaireresponse.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-questionnaireresponse",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-questionnaireresponse",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "QuestionnaireResponse",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-kenya-core-relatedperson.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "kenya-core-relatedperson",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/kenya-core-relatedperson",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "RelatedPerson",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-license-status-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "license-status-extension",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/license-status-extension",
+    "version" : "1.0.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-licensing-body-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "licensing-body-extension",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/licensing-body-extension",
+    "version" : "1.0.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-patient-ethnicity-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "patient-ethnicity-extension",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/patient-ethnicity-extension",
+    "version" : "1.0.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-person-with-disability-extension.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "person-with-disability-extension",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/person-with-disability-extension",
+    "version" : "1.0.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-practitioner-sha-ke.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "practitioner-sha-ke",
+    "url" : "https://fhir.sha.go.ke/fhir/StructureDefinition/practitioner-sha-ke",
+    "version" : "1.0.0",
+    "kind" : "resource",
+    "type" : "Practitioner",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "ValueSet-ConditionCategoryVS.json",
+    "resourceType" : "ValueSet",
+    "id" : "ConditionCategoryVS",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/ConditionCategoryVS",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-ConditionClinicalStatusVS.json",
+    "resourceType" : "ValueSet",
+    "id" : "ConditionClinicalStatusVS",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/ConditionClinicalStatusVS",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-ConditionVerificationStatusVS.json",
+    "resourceType" : "ValueSet",
+    "id" : "ConditionVerificationStatusVS",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/ConditionVerificationStatusVS",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-administrative-gender-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "administrative-gender-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/administrative-gender",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-approval-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "approval-status-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/approval-status-vs",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-encounter-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "encounter-status-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/encounter-status",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-encounter-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "encounter-type-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/encounter-type",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-episode-of-care-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "episode-of-care-status-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/episode-of-care-status",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-episode-of-care-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "episode-of-care-type-vs",
+    "url" : "https://fhir.sha.ke/fhir/ValueSet/episode-of-care-type",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-facility-level-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "facility-level-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/facility-level-vs",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-kenya-license-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kenya-license-status-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/kenya-license-status",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-kenya-regulatory-body-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "kenya-regulatory-body-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/kenya-regulatory-body",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-location-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "location-type-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/location-type-vs",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-national-id-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "national-id-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/national-id",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-nz-ethnic-group-level-4-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "nz-ethnic-group-level-4-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/nz-ethnic-group-level-4",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-organization-type-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "organization-type-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/organization-type-vs",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-registration-number-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-registration-number-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registration-number",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-registry-id-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-registry-id-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-registry-id",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-roles-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-roles-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-roles",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-practitioner-specialties-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "practitioner-specialties-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/practitioner-specialties",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-related-person-relationship-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "related-person-relationship-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/related-person-relationship",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "ValueSet-slade-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "slade-code-vs",
+    "url" : "https://fhir.sha.go.ke/fhir/ValueSet/slade-code",
+    "version" : "1.0.0"
+  }]
+}

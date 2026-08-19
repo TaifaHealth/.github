@@ -1,0 +1,4 @@
+# The official HL7 validator jar is ~190MB and is fetched on demand by
+# validate.sh (and by the conformance CI job). It is a build tool, not a pin.
+validator_cli.jar
+validator_cli.jar.part

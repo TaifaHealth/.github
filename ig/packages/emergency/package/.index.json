@@ -1,0 +1,1904 @@
+{
+  "index-version" : 2,
+  "files" : [{
+    "filename" : "ImplementationGuide-fhir.kenyaEmergencyIG.json",
+    "resourceType" : "ImplementationGuide",
+    "id" : "fhir.kenyaEmergencyIG",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ImplementationGuide/fhir.kenyaEmergencyIG",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "CodeSystem-ClaimDiagnosisCodeableConceptCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ClaimDiagnosisCodeableConceptCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/ClaimDiagnosisCodeableConceptCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ExclusionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ExclusionCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/ExclusionCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaBodySiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaBodySiteCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/KenyaBodySiteCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSocialHealthAuthorityInterventionCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSocialHealthAuthorityInterventionCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/KenyaSocialHealthAuthorityInterventionCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-KenyaSubSiteCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "KenyaSubSiteCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/KenyaSubSiteCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-PreAuthExclusionsCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "PreAuthExclusionsCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/PreAuthExclusionsCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-WaiverTypeCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "WaiverTypeCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/WaiverTypeCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-active-components-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "active-components-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/active-components-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "additional-instruction-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/additional-instruction-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-address-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "address-use-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/address-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-adjudication-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "adjudication-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/adjudication-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-adjustment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "adjustment-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/adjustment-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administration-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administration-method-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/administration-method-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-administrative-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "administrative-gender-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/administrative-gender-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-allergy-reporter.json",
+    "resourceType" : "CodeSystem",
+    "id" : "allergy-reporter",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/allergy-reporter",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ambulance-case-rejection-reason.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ambulance-case-rejection-reason",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/ambulance-case-rejection-reason",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-ambulance-case-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "ambulance-case-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/ambulance-case-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-annual-quantity-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "annual-quantity-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/annual-quantity-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-approach-site-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "approach-site-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/approach-site-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-as-needed-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "as-needed-reason-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/as-needed-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-assessment-types.json",
+    "resourceType" : "CodeSystem",
+    "id" : "assessment-types",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/assessment-types",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-attachment-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "attachment-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/attachment-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-auth-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "auth-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/auth-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-authorization-failure-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "authorization-failure-reason-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/authorization-failure-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-authorization-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "authorization-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/authorization-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-avpu-scale.json",
+    "resourceType" : "CodeSystem",
+    "id" : "avpu-scale",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/avpu-scale",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-breathing-state-classification.json",
+    "resourceType" : "CodeSystem",
+    "id" : "breathing-state-classification",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/breathing-state-classification",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-bulk-remittance-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "bulk-remittance-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/bulk-remittance-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-care-plan-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "care-plan-category-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/care-plan-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-case-priority.json",
+    "resourceType" : "CodeSystem",
+    "id" : "case-priority",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/case-priority",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-civil-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "civil-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/civil-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-care-team-role-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-care-team-role-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-care-team-role-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-expiry-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-expiry-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-expiry-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-information-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-information-category-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-information-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-state-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-state-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-state-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-subtype-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-subtype-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-subtype-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claim-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claim-use-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claim-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-claims-departments-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "claims-departments-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/claims-departments-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coding-system-source.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coding-system-source",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/coding-system-source",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-category-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-category-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-category-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-clinical-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-clinical-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-clinical-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-codes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-codes-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-codes-cs",
+    "version" : "0.1.0",
+    "content" : "not-present"
+  },
+  {
+    "filename" : "CodeSystem-condition-severity-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-severity-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-severity-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-stage-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-stage-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-stage-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-statuses.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-statuses",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-statuses",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-condition-verification-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "condition-verification-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/condition-verification-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-system-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-system-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/contact-point-system-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-contact-point-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "contact-point-use-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/contact-point-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-copay-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "copay-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/copay-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-class-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-class-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/coverage-class-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-member-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-member-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/coverage-member-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-plan-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-plan-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/coverage-plan-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-coverage-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "coverage-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/coverage-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-diagnosis-kind-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "diagnosis-kind-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/diagnosis-kind-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-diagnosis-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "diagnosis-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/diagnosis-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dosage-additional-instruction-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dosage-additional-instruction-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/dosage-additional-instruction-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-dose-units.json",
+    "resourceType" : "CodeSystem",
+    "id" : "dose-units",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/dose-units",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-age-group.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-age-group",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-age-group",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-agency-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-agency-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-agency-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-body-region.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-body-region",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-body-region",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-breathing-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-breathing-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-breathing-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-caller-relationship.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-caller-relationship",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-caller-relationship",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-clinical-acuity.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-clinical-acuity",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-clinical-acuity",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-crew-role.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-crew-role",
+    "url" : "http://hie.go.ke/fhir/CodeSystem/em-crew-role",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-destination-facility-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-destination-facility-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-destination-facility-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-diagnosis-category.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-diagnosis-category",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-diagnosis-category",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-dispatch-priority.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-dispatch-priority",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-dispatch-priority",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-emergency-centre-capability.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-emergency-centre-capability",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-emergency-centre-capability",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-encounter-class.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-encounter-class",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-encounter-class",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-facility-level.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-facility-level",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-facility-level",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-id-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-id-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-id-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-incident-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-incident-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-incident-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-observation-category.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-observation-category",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-observation-category",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-observation-code.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-observation-code",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-observation-code",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-ownership-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-ownership-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-ownership-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-participant-role.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-participant-role",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-participant-role",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-poc-encounter-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-poc-encounter-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-poc-encounter-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-priority-level-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-priority-level-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-priority-level-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-responder-unit-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-responder-unit-type",
+    "url" : "http://hie.go.ke/fhir/CodeSystem/em-responder-unit-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-scene-location-type.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-scene-location-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-scene-location-type",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-secondary-survey-region.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-secondary-survey-region",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-secondary-survey-region",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-unit-response-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-unit-response-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-unit-response-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-em-vital-qualitative-state.json",
+    "resourceType" : "CodeSystem",
+    "id" : "em-vital-qualitative-state",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/em-vital-qualitative-state",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-encounter-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "encounter-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/encounter-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-entry-types.json",
+    "resourceType" : "CodeSystem",
+    "id" : "entry-types",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/entry-types",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/episode-of-care-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-episode-of-care-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "episode-of-care-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/episode-of-care-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-flag-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "flag-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/flag-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-formulation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "formulation-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/formulation-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-gender-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "gender-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/gender-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-generic-products-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "generic-products-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/generic-products-cs",
+    "version" : "0.1.0",
+    "content" : "not-present"
+  },
+  {
+    "filename" : "CodeSystem-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-types-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/identifier-types-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-identifier-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "identifier-use-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/identifier-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-investigations-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "investigations-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/investigations-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-khts-counties-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "khts-counties-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/khts-counties-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-code-systems-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-code-systems-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/knhts-code-systems-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-contact-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-contact-relationship-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/knhts-contact-relationship-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-identifier-types-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-identifier-types-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/knhts-identifier-types-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-knhts-pat-title-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "knhts-pat-title-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/knhts-pat-title-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-fund-choices-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-fund-choices-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kps-fund-choices-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-schemes-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-schemes-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kps-schemes-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-service-access-point-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-service-access-point-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kps-service-access-point-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kps-service-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kps-service-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kps-service-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsa-client-registration-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsa-client-registration-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsa-client-registration-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-consultation-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-consultation-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-clinical-consultation-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-status-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-status-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-clinical-status-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-clinical-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-clinical-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-clinical-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsb-verification-status.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsb-verification-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsb-verification-status",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsc-diagnostics-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsc-diagnostics-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsc-diagnostics-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsd-treatment-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsd-treatment-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsd-treatment-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpse-immunization-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpse-immunization-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpse-immunization-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-kpsg-referral-codes.json",
+    "resourceType" : "CodeSystem",
+    "id" : "kpsg-referral-codes",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/kpsg-referral-codes",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-manifestation-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "manifestation-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/manifestation-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-med-admin-route-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "med-admin-route-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/med-admin-route-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-admin-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-admin-status-reason-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-admin-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-administration-route.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-administration-route",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-administration-route",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-dispense-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-dispense-status-reason-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-dispense-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-priorityCS.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-priorityCS",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-request-priorityCS",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-request-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-request-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-request-status-reason-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-request-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-medication-status-reason-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "medication-status-reason-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/medication-status-reason-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-name-use-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "name-use-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/name-use-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-non-edi-claim-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "non-edi-claim-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/non-edi-claim-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-observation-methods-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "observation-methods-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/observation-methods-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payee-type-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payee-type-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/payee-type-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-mechanism-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-mechanism-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/payment-mechanism-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-payment-method-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "payment-method-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/payment-method-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-procedure-code-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "procedure-code-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/procedure-code-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-process-priority-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "process-priority-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/process-priority-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-pulse-state-classification.json",
+    "resourceType" : "CodeSystem",
+    "id" : "pulse-state-classification",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/pulse-state-classification",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-questionnaire-category.json",
+    "resourceType" : "CodeSystem",
+    "id" : "questionnaire-category",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/questionnaire-category",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-reason-medication-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "reason-medication-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/reason-medication-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-related-claim-relationship-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "related-claim-relationship-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/related-claim-relationship-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-remittance-choice-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "remittance-choice-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/remittance-choice-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-remittance-status-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "remittance-status-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/remittance-status-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-route-of-administration-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "route-of-administration-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/route-of-administration-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-unit-of-measure-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "unit-of-measure-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/unit-of-measure-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-usage-frequency-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "usage-frequency-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/usage-frequency-cs",
+    "version" : "0.1.0",
+    "content" : "complete"
+  },
+  {
+    "filename" : "CodeSystem-vital-signs-loinc-cs.json",
+    "resourceType" : "CodeSystem",
+    "id" : "vital-signs-loinc-cs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/CodeSystem/vital-signs-loinc-cs",
+    "version" : "0.1.0",
+    "content" : "fragment"
+  },
+  {
+    "filename" : "NamingSystem-ns-emergency-record-identifier.json",
+    "resourceType" : "NamingSystem",
+    "id" : "ns-emergency-record-identifier",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "NamingSystem-ns-national-id.json",
+    "resourceType" : "NamingSystem",
+    "id" : "ns-national-id",
+    "kind" : "identifier"
+  },
+  {
+    "filename" : "Questionnaire-emergency-assessment-questionnaire.json",
+    "resourceType" : "Questionnaire",
+    "id" : "emergency-assessment-questionnaire",
+    "url" : "http://localhost:8085/fhir/Questionnaire/emergency-assessment-questionnaire",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "StructureDefinition-em-administration-attempts.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-administration-attempts",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-administration-attempts",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-allergy-criticality-flag.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-allergy-criticality-flag",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-allergy-criticality-flag",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Flag",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-allergy-intolerance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-allergy-intolerance",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-allergy-intolerance",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "AllergyIntolerance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-approximate-age.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-approximate-age",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-approximate-age",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-caller-reported-active-bleeding.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-caller-reported-active-bleeding",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-caller-reported-active-bleeding",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-caller-reported-breathing-status.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-caller-reported-breathing-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-caller-reported-breathing-status",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-caller-reported-level-of-consciousness.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-caller-reported-level-of-consciousness",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-caller-reported-level-of-consciousness",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-caller-reported-observation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-caller-reported-observation",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-caller-reported-observation",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-clinical-guidance-message.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-clinical-guidance-message",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-clinical-guidance-message",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-destination-facility.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-destination-facility",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-destination-facility",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Location",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-diagnostic-report.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-diagnostic-report",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-diagnostic-report",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "DiagnosticReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-emergency-centre-capability.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-emergency-centre-capability",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-emergency-centre-capability",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-facility-level.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-facility-level",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-facility-level",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-incident-caller.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-incident-caller",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-incident-caller",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-incident-encounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-incident-encounter",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-incident-encounter",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Encounter",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-incident-priority.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-incident-priority",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-incident-priority",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-is-adult.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-is-adult",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-is-adult",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-last-location-updated-at.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-last-location-updated-at",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-last-location-updated-at",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-medication-administration.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-medication-administration",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-medication-administration",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "MedicationAdministration",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-no-findings-on-exam.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-no-findings-on-exam",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-no-findings-on-exam",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-no-known-allergy.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-no-known-allergy",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-no-known-allergy",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "AllergyIntolerance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-number-of-patients.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-number-of-patients",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-number-of-patients",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-ownership-type.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-ownership-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-ownership-type",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-patient-identity-verified.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-patient-identity-verified",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-patient-identity-verified",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-poc-encounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-poc-encounter",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-poc-encounter",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Encounter",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-procedure.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-procedure",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-procedure",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Procedure",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-qualitative-state.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-qualitative-state",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-qualitative-state",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-relieved.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-relieved",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-relieved",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-responder-crew-member.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-responder-crew-member",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-responder-crew-member",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-responder-unit-location.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-responder-unit-location",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-responder-unit-location",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Location",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-responding-unit.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-responding-unit",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-responding-unit",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-scene-location.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-scene-location",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-scene-location",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Location",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-secondary-survey-observation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-secondary-survey-observation",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-secondary-survey-observation",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-supporting-agency.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-supporting-agency",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-supporting-agency",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-telematics-device-id.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-telematics-device-id",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-telematics-device-id",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-triage-acuity-observation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-triage-acuity-observation",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-triage-acuity-observation",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-unidentified-patient.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-unidentified-patient",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-unidentified-patient",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-unit-response-status.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-unit-response-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-unit-response-status",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-vital-age-group.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-vital-age-group",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-vital-age-group",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-em-vital-signs-observation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "em-vital-signs-observation",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/em-vital-signs-observation",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-emergency-ambulance-case-status.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-emergency-ambulance-case-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-emergency-ambulance-case-status",
+    "version" : "0.1.0",
+    "kind" : "complex-type",
+    "type" : "Extension",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-emergency-ambulance-encounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-emergency-ambulance-encounter",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-emergency-ambulance-encounter",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Encounter",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-emergency-case-assessment.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-emergency-case-assessment",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-emergency-case-assessment",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Observation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-emergency-composition.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-emergency-composition",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-emergency-composition",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "Composition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-emergency-document-reference.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-emergency-document-reference",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-emergency-document-reference",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "DocumentReference",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-ke-emergency-questionnaire-response.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "ke-emergency-questionnaire-response",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/StructureDefinition/ke-emergency-questionnaire-response",
+    "version" : "0.1.0",
+    "kind" : "resource",
+    "type" : "QuestionnaireResponse",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "ValueSet-active-components-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "active-components-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/active-components-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-allergy-reporter-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "allergy-reporter-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/allergy-reporter-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-ambulance-case-rejection-reason-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "ambulance-case-rejection-reason-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/ambulance-case-rejection-reason-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-ambulance-case-status-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "ambulance-case-status-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/ambulance-case-status-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-assessment-types-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "assessment-types-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/assessment-types-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-avpu-scale.json",
+    "resourceType" : "ValueSet",
+    "id" : "avpu-scale",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/avpu-scale",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-breathing-state-classification-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "breathing-state-classification-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/breathing-state-classification-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-case-priority-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "case-priority-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/case-priority-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-coding-system-source-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "coding-system-source-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/coding-system-source-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-condition-statuses-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "condition-statuses-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/condition-statuses-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-dose-units-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "dose-units-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/dose-units-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-age-group.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-age-group",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-age-group",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-agency-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-agency-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-agency-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-body-region.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-body-region",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-body-region",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-breathing-status.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-breathing-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-breathing-status",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-caller-relationship.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-caller-relationship",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-caller-relationship",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-clinical-acuity.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-clinical-acuity",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-clinical-acuity",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-crew-role.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-crew-role",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-crew-role",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-destination-facility-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-destination-facility-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-destination-facility-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-diagnosis-category.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-diagnosis-category",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-diagnosis-category",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-dispatch-priority.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-dispatch-priority",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-dispatch-priority",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-emergency-centre-capability.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-emergency-centre-capability",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-emergency-centre-capability",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-facility-level.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-facility-level",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-facility-level",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-id-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-id-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-id-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-incident-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-incident-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-incident-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-ownership-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-ownership-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-ownership-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-poc-encounter-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-poc-encounter-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-poc-encounter-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-priority-level-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-priority-level-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-priority-level-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-responder-unit-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-responder-unit-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-responder-unit-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-scene-location-type.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-scene-location-type",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-scene-location-type",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-secondary-survey-region.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-secondary-survey-region",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-secondary-survey-region",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-unit-response-status.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-unit-response-status",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-unit-response-status",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-em-vital-qualitative-state.json",
+    "resourceType" : "ValueSet",
+    "id" : "em-vital-qualitative-state",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/em-vital-qualitative-state",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-emergency-manifestation-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "emergency-manifestation-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/emergency-manifestation-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-entry-types-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "entry-types-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/entry-types-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-investigations-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "investigations-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/investigations-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-medication-administration-route-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "medication-administration-route-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/medication-administration-route-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-procedure-code-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "procedure-code-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/procedure-code-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-pulse-state-classification-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "pulse-state-classification-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/pulse-state-classification-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-questionnaire-category-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "questionnaire-category-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/questionnaire-category-vs",
+    "version" : "0.1.0"
+  },
+  {
+    "filename" : "ValueSet-vital-signs-vs.json",
+    "resourceType" : "ValueSet",
+    "id" : "vital-signs-vs",
+    "url" : "https://nshr-uat.sha.go.ke/fhir/ValueSet/vital-signs-vs",
+    "version" : "0.1.0"
+  }]
+}
