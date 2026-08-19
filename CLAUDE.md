@@ -64,6 +64,11 @@ reference implementation.
 - **Icons: local Iconsax pack only, two-tone variant by default**, vendored
   under `frontend/src/lib/icons/` behind an `Icon.svelte` wrapper. Never
   add lucide or another icon library, it would look like a different team
+- **Arrows are chevrons only.** Any directional affordance (dropdowns,
+  breadcrumbs, pagination, back, collapse, sort) uses the pure chevron
+  glyphs: `arrow-down4`, `arrow-up3`, `arrow-left4`, `arrow-right4` in the
+  Iconsax pack. Never the tailed arrow variants (`arrow-down`, `arrow-up2`,
+  and friends), never circled or squared arrows for plain navigation
 - **Radius ramp, three steps**: 6px (chips, tiles), 8px (buttons, inputs,
   menus), 14px (cards, modals). A child inside a rounded parent takes a
   strictly smaller radius, and nothing is rounder than the card
