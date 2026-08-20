@@ -223,3 +223,93 @@ the amount of patient data resident on a device that may be shared or lost, and
 that trade needs a decision by someone accountable, not a default chosen here.
 
 **Accepted by** not accepted.
+
+---
+
+## HAZ-009 A manifestation code is offered for a reaction that was ruled out
+
+**Chain.** The allergy form suggests a coded manifestation from what the
+clinician typed. The clinician types "no rash seen". The suggestion offers
+`RASH`, they accept it under time pressure, and the record now says the patient
+reacted with a rash they were explicitly noted not to have. The next clinician
+reads it as fact.
+
+**Severity** Moderate. **Likelihood** Low. **Status** controlled.
+
+**Controls.** Nothing is ever mapped automatically: on the server there is no
+text-to-code mapping at all, and a code that the terminology service cannot
+verify is dropped rather than stored. In the interface the suggestion is offered
+behind an explicit click, never applied on its own. It fires only on a
+whole-word match of a code's own wording, and offers nothing at all when two
+codes both fit, so "crushing chest pain" suggests neither `CHEST-PAIN` nor
+`PAIN`. Negated matches are suppressed: "no rash", "denies rash", "without rash"
+all offer nothing, scoped to the clause so that "fever, no rash" still offers
+`FEVER`. The clinician's own words are always kept and always exported alongside
+any code.
+
+**Residual risk.** Negation detection is a word list, not language
+understanding. Phrasings it does not know will still offer a code, and the
+control of last resort is that a person clicked.
+
+**Needs a decision.** Whether to keep the suggestion at all is a clinical
+safety officer's call, not an engineering one. Removing it costs a few
+keystrokes per allergy and removes this hazard entirely.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-010 An adult is told they are overdue eighteen infant vaccines
+
+**Chain.** The KEPI schedule was placed against a date of birth with no upper
+age bound, so every scheduled childhood dose not on the record read as
+"overdue". A 48 year old patient's chart showed eighteen doses overdue in red.
+The reader learns the immunization strip means nothing, and misses the child
+for whom it means everything.
+
+**Severity** Major, by way of alarm fatigue rather than directly.
+**Likelihood** Very high: it happened for every adult in the system.
+**Status** controlled.
+
+**Controls.** A dose the childhood schedule no longer addresses now reads
+`out-of-range` rather than `overdue`, and the section says in one quiet line
+that the schedule no longer applies at this age and that vaccinations given
+before this record began are not held here. Doses actually on the record still
+read as given at any age. Covered by tests in both directions: an adult shows
+no overdue dose, and a two year old with nothing recorded still does.
+
+**Residual risk, and it is the important part.** The cutoff is five years, and
+that is **not a settled clinical number**. Kenyan and WHO catch-up guidance
+differs by antigen and the right answer is probably per vaccine rather than one
+bound. Five was chosen because it is the common catch-up horizon and because
+the alternative in the code was no bound at all, which was certainly wrong. Set
+too low, a child who could still be caught up stops being flagged, which is the
+more dangerous direction.
+
+**Needs a decision** before release: the cutoff, and whether it should be per
+antigen.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-011 An out-of-range vital sign is shown without a reference range
+
+**Chain.** The observation history flags a reading as out of range in words
+("systolic out of range") but does not show the range it was judged against.
+A clinician cannot tell whether the threshold matches their protocol, and a
+facility using different thresholds has no way to see the mismatch.
+
+**Severity** Minor. **Likelihood** Medium. **Status** open.
+
+**Controls.** The flag is worded, not coloured red: clinical severity owns red
+in this interface and an out-of-range vital sign is not a critical result. The
+ranges are the widely taught adult resting ones and live in one place in
+`internal/service/vitals.go`.
+
+**Mitigation outstanding.** Show the range alongside the flag, and let a
+facility configure its own thresholds rather than inherit whatever was
+hardcoded. Not built.
+
+**Accepted by** not accepted.
+
