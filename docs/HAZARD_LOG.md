@@ -313,3 +313,169 @@ hardcoded. Not built.
 
 **Accepted by** not accepted.
 
+---
+
+## HAZ-012 Two patients are admitted into one bed
+
+**Chain.** Two devices draw the bed board, both see bed 4 free, both admit. The
+software records two patients in one bed and the second is walked to a bed that
+is occupied.
+
+**Severity** Major. **Likelihood** High on a busy ward. **Status** controlled.
+
+**Controls.** A partial unique index, `admissions_one_live_per_bed ON
+admissions(bed_id) WHERE status='admitted'`. There is deliberately **no**
+application pre-check of occupancy: a check in Go cannot see a transaction that
+has not committed, so the second insert blocks on the index and returns 23505,
+which becomes a 409 saying the board has moved and to pick another bed. A CHECK
+pins `status` to the two values the index is written against, because a status
+string drifting by one character would silently free every bed it touched.
+
+**Verified independently at the database level**, not only through the
+application: a second live admission to one bed is rejected by Postgres.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-013 A patient appears on two wards at once
+
+**Chain.** An admission is opened for a patient who is already admitted, from a
+second encounter or a colleague who did not know. The round on the ward they
+are not on shows them; the round on the ward they are on may not.
+
+**Severity** Major. **Likelihood** Medium. **Status** controlled.
+
+**Controls.** Partial unique indexes on `(facility_id, patient_id)` and on
+`visit_id` where the admission is live. The refusal says to transfer rather
+than admit again. The ward round is derived from live admissions, so there is
+no second list to fall out of step.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-014 A transfer half applies and the movement history stops reconstructing
+
+**Chain.** The bed is updated but no movement is written, or the reverse. Where
+a patient was can no longer be reconstructed, which is half the point of ADT.
+
+**Severity** Moderate. **Likelihood** Medium. **Status** controlled.
+
+**Controls.** One transaction: `SELECT ... FOR UPDATE` on the admission so two
+clinicians moving the same patient serialise rather than interleave, then the
+bed check, the update and the movement insert. The destination bed is claimed
+by the same unique index as an admission, so a transfer into a bed taken a
+moment ago fails on the constraint rather than on a stale read.
+`admission_movements` is append-only and **the database enforces it**: a
+trigger refuses UPDATE and DELETE, because a record of where a patient was that
+somebody can rewrite is not a record.
+
+**Verified independently**: UPDATE and DELETE on a movement row are both
+refused by Postgres with an explicit message.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-015 A discharge frees a bed while the patient is still on the ward
+
+**Chain.** The bed reads free and the next patient is brought to it. Or the
+reverse: the patient is recorded as gone with the bed still held, and the ward
+looks full when it is not.
+
+**Severity** Major. **Likelihood** Medium. **Status** controlled.
+
+**Controls.** There is no `occupied` flag anywhere. Occupancy is derived from
+the live admission every time it is read, so there is no second copy of the
+truth to drift. Discharge is one transaction closing the admission, writing the
+movement and ending the encounter. A CHECK makes a discharge all of its parts
+or none: `status='discharged'` requires both a time and a destination.
+Destination is one of home, referred, absconded, died, so an absconded patient
+cannot be recorded as having gone home.
+
+**Residual risk.** The system records what a clinician tells it. A patient who
+walks out unrecorded is still shown in a bed, which is what the absconded
+destination exists to close afterwards.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-016 An encounter is closed while its patient is lying on a ward
+
+**Chain.** The outpatient consultation panel discharges the visit. The patient
+leaves every list, the bed stays occupied, and nobody has written a discharge
+summary or recorded where they went.
+
+**Severity** Major. **Likelihood** High, because the outpatient discharge button
+is the one clinicians already know. **Status** controlled.
+
+**Controls.** Two layers, deliberately. The service answers 409 naming the ward
+and bed and saying to discharge from the ward instead; and the repository
+UPDATE carries `AND NOT EXISTS (live admission)`, so the guarantee does not
+depend on the service being called first. Admission moves the encounter to
+`admitted` rather than closing it, so an inpatient's notes, orders and results
+still belong to the encounter that admitted them.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-017 An admission is filed against an encounter that already ended
+
+**Chain.** A stale panel admits on a discharged encounter. The stay hangs off a
+closed record and the timeline reads as care given after the patient left.
+
+**Severity** Moderate. **Likelihood** Medium. **Status** controlled.
+
+**Controls.** The insert selects from `visits ... AND v.status <> 'discharged'`,
+and the patient is taken from the visit row rather than from the caller, so an
+admission can never be filed against somebody else. A closed encounter (409)
+is told apart from another facility's (404), because they need different things
+done about them.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-018 A queued admission is accepted at the bedside and refused on arrival
+
+**Chain.** The link is down. A device queues the admission the way it queues
+vitals. Two devices flush into the same bed and one is refused, having already
+shown a clinician the patient in it.
+
+**Severity** Major. **Likelihood** High on an intermittent link.
+**Status** controlled by refusal.
+
+**Controls.** No ADT route is queueable and none accepts an idempotency key.
+Admitting refuses offline in words: a bed is a claim on a central resource, not
+a record of something that already happened to a patient, and that is the line
+the offline architecture already draws for the Client Registry.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-019 Length of stay is computed from a timestamp in the wrong zone
+
+**Chain.** "In for 2 d 6 h" is what a clinician acts on for fluid balance and
+review timing. Computing it from a formatted string carrying a `Z` it did not
+earn puts it hours out. `docs/CLINICAL_SAFETY.md` warns that most published
+health IT harm comes from mundane things, and names time zones.
+
+**Severity** Minor to moderate. **Likelihood** Medium.
+**Status** controlled for ADT, **open elsewhere**.
+
+**Controls.** Stay length is computed in Postgres from the admission time, and
+every timestamp the ADT routes emit is converted to UTC before the literal `Z`
+is appended.
+
+**Mitigation outstanding, and it is the wider one.** The rest of the codebase
+still formats `to_char(ts, '...Z')` without the conversion, which is correct
+only while every database session opens in UTC. That is an assumption nobody
+has written down and it holds today by luck rather than design. It needs a
+sweep.
+
+**Accepted by** not accepted.
+
