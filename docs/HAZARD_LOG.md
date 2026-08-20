@@ -465,17 +465,27 @@ earn puts it hours out. `docs/CLINICAL_SAFETY.md` warns that most published
 health IT harm comes from mundane things, and names time zones.
 
 **Severity** Minor to moderate. **Likelihood** Medium.
-**Status** controlled for ADT, **open elsewhere**.
+**Status** controlled.
 
 **Controls.** Stay length is computed in Postgres from the admission time, and
-every timestamp the ADT routes emit is converted to UTC before the literal `Z`
-is appended.
+the ADT routes convert to UTC before appending the literal `Z`.
 
-**Mitigation outstanding, and it is the wider one.** The rest of the codebase
-still formats `to_char(ts, '...Z')` without the conversion, which is correct
-only while every database session opens in UTC. That is an assumption nobody
-has written down and it holds today by luck rather than design. It needs a
-sweep.
+**The wider fix, which is the important half.** The other 40 `to_char(ts,
+'...Z')` sites across the read models did not convert, and nothing pinned a
+session timezone. They were correct only because the database container
+happened to run `Etc/UTC`. Point the system at a Postgres set to
+`Africa/Nairobi`, which is an entirely reasonable thing for a Kenyan facility
+to configure, and every time in the record silently shifts by three hours while
+still claiming to be UTC: doses, observations, admissions, the audit trail.
+
+Fixed by pinning the session to UTC in the connection pool, once, rather than
+editing forty call sites, because a sweep leaves the forty-first to whoever
+writes the next query. A test asks for `Africa/Nairobi` in the DSN and asserts
+the session is still UTC and that `to_char` agrees with it. The test was
+checked in both directions: with the pin removed it fails.
+
+**Residual risk.** A read model that formats a timestamp in application code
+rather than in SQL would not be covered by the pin. None does today.
 
 **Accepted by** not accepted.
 
