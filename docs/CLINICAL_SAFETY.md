@@ -25,11 +25,18 @@ DCB0160 family), adapted to our size.
 
 ## The hazard log
 
+The log is [`HAZARD_LOG.md`](HAZARD_LOG.md).
+
 Every hazard gets an entry: identifier, description, the chain from software
 behaviour to potential harm, severity, likelihood, existing controls, planned
 mitigation, residual risk after mitigation, and who accepted that residual
 risk. Entries are closed, never deleted. The log is reviewed at every release
 and audited when a facility asks.
+
+Accepting residual risk is a named person's decision. TaifaHealth has not
+appointed a clinical safety officer, so every entry in the log currently reads
+"not accepted", and HAZ-003 in particular should block any multi-facility
+deployment until it does.
 
 Risk is severity times likelihood, using the categories in the clinical safety
 issue template. A catastrophic hazard with any likelihood above negligible
