@@ -489,3 +489,143 @@ rather than in SQL would not be covered by the pin. None does today.
 
 **Accepted by** not accepted.
 
+---
+
+## HAZ-020 An imaging study irradiates a pregnant patient
+
+**Chain.** A clinician orders a plain abdominal film or a CT on a woman who is
+pregnant. Nobody asks, or the answer is not recorded, and the foetus is
+irradiated.
+
+**Severity** Major to catastrophic, depending on dose and gestation.
+**Likelihood** Medium: the commonest ionising studies in these facilities are
+abdominal and pelvic. **Status** controlled.
+
+**Controls.** The order form is where this is caught, not the machine. For an
+ionising study on a patient the register says could be pregnant, a pregnancy
+status is required and the order is refused without one. `not_applicable` is
+refused on its own, because it is the answer somebody clicks to get past the
+question. An answer of `pregnant` refuses the order outright and proceeding
+requires a written justification stored on the order, on the care timeline and
+in the audit trail with the clinician's identity. This is deliberately the
+allergy-at-prescribing model from HAZ-001: refusal plus accountability, not a
+silent auto-refusal and not a warning nobody reads. The interlock is a CHECK on
+the table as well as a service rule, so it survives a future caller who forgets
+to ask. Whether a study is ionising is derived from its modality across all 51
+of Kenya's acquisition modalities, and an unknown modality is treated as
+ionising.
+
+**Residual risk, and it is the weak point.** `unknown` is allowed through. It is
+often the true answer, and forcing a choice between two answers a clinician does
+not have produces a false one. An unknown status is carried onto the radiology
+worklist in amber and the radiographer at the machine is the control of last
+resort, which is a human control and the weakest kind by the standard in
+`docs/CLINICAL_SAFETY.md`.
+
+**Closed instance, kept visible because the lesson is the hazard.** Code review
+found the age band originally decided whether the interlock ran at all. An
+ionising study on a patient recorded as **pregnant** but outside the band, or
+male, skipped the justification, violated the table CHECK, and returned a 404
+saying the encounter did not exist: the order was silently lost. The order panel
+asks the pregnancy question without knowing the patient's age, so a mis-click
+reached it. Fixed so a recorded `pregnant` is believed whatever the register
+says, with the band deciding only whether a **missing** answer is refused. The
+test for it was verified to fail against the defective code.
+
+**Mitigation outstanding.** No dose recording and no cumulative dose per
+patient. No enforced justification for `unknown`, considered and not built
+because it would put friction on every woman of childbearing age whose status
+was not checked, and a decision that heavy belongs to a clinical safety officer.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-021 A report is filed against the wrong study or the wrong patient
+
+**Chain.** A radiologist works from two studies at once, or a stale panel. The
+report lands on another patient's record and the next clinician reads someone
+else's images as this patient's.
+
+**Severity** Major. **Likelihood** Low to medium. **Status** controlled.
+
+**Controls.** There is no patient identifier in the report request to be wrong:
+the report is keyed to the order and the order supplies both the patient and the
+facility. A unique index allows one report per order, so a second is refused
+rather than leaving two answers to one question with nothing saying which is
+current. The report modal shows the patient's name and UPI, the study, and the
+clinical question that was asked; the worklist row carries name, UPI, age and
+sex, because a name and a UPI are what two patients called Wanjiku Kamau have in
+common.
+
+**Residual risk.** Nothing verifies that the images the radiologist looked at are
+the images the order asked for. Without a PACS there is nothing to verify
+against.
+
+**Mitigation outstanding.** No amendment path: a wrong report can only be
+followed by a new order. Amendment is its own hazard, since the ordering
+clinician may already have acted on the original, and needs its own analysis.
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-022 A critical imaging finding sits unread in a worklist
+
+**Chain.** A radiologist reports a tension pneumothorax or an extradural
+haematoma. The ordering clinician has gone off shift, nobody reads the
+notification, and the patient waits.
+
+**Severity** Catastrophic. **Likelihood** Medium.
+**Status** open, controlled only weakly.
+
+**Controls.** The reporter marks the finding critical. The notification to the
+ordering clinician is retitled and says so, the timeline entry is prefixed
+CRITICAL, the flag is on the record and in the audit trail, and the worklist and
+chart show the impression in the danger colour. That is the whole of it.
+
+**What is deliberately not built, said plainly because the gap is the hazard.**
+No acknowledgement, no read receipt, no escalation after a timeout, no second
+recipient, no on-call routing, no telephone or SMS. The checkbox in the
+interface says so in as many words, rather than letting a radiologist believe
+that ticking it summons somebody. A critical result pathway is a facility policy
+question, who is called, in what time, and who is called when they do not
+answer, before it is a software one, and inventing one here would be worse than
+naming its absence.
+
+**This is the highest residual risk in the log after HAZ-003.**
+
+**Accepted by** not accepted.
+
+---
+
+## HAZ-023 A radiology report is on the chart and absent from the patient summary
+
+**Chain.** The terminology service cannot confirm an investigation code, so the
+order stores none. The report is filed, appears on the chart, and reads
+normally. The Kenya Patient Summary leaves it out, and the receiving facility
+repeats the study or misses the finding.
+
+**Severity** Moderate. **Likelihood** Low. **Status** controlled, incomplete.
+
+**Controls.** The omission is deliberate rather than accidental:
+`DiagnosticReport.code` is bound Required, so a text-only code would fail the
+binding and take its whole section entry down with it. The report is never
+withheld from the patient's own record. A code the terminology service answers
+"not found" for is logged as loudly as an outage, because for a code that came
+off our own catalogue it means the catalogue is wrong.
+
+**Residual risk.** Nothing tells the clinician at the time that this report will
+not travel. The chart already carries a conformance-note mechanism for the
+missing-phone case (HAZ-007) and this belongs there.
+
+**Related gap, stated rather than hidden.** The acquisition modality does not
+travel in the summary at all, because `ke-kps-imaging-study` is not emitted:
+FHIR R4 makes `ImagingStudy.series.uid` mandatory and there is no PACS to supply
+a DICOM UID. Minting one would assert that a series exists which nothing can
+resolve, the same class of lie the export already refuses for allergy
+substances. The modality is on the order, the worklist and the chart, and is
+legible inside the investigation code's own wording.
+
+**Accepted by** not accepted.
+
