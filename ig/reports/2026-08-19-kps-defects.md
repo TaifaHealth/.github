@@ -85,13 +85,48 @@ of content that must not be reinvented facility by facility.
   `"Meningococcal meningitis[G01]"`, which appears to be an export
   artifact rather than intended text.
 
+## D4: the investigation code system is published as `ksp`, not `kps`
+
+`CodeSystem-ksp-investigation-cs.json` declares
+
+    "url": "https://fhir.dha.go.ke/ig/patient-summary/CodeSystem/ksp-investigation-cs"
+
+with the acronym transposed. `ValueSet-kps-investigations-vs` includes
+from the same transposed URL, so the two agree and nothing fails
+validation today. It is consistent, which is precisely why it is worth
+raising now: every implementer who codes an investigation is writing
+`ksp` into stored clinical data, and correcting the canonical later
+silently invalidates all of it.
+
+Unlike D1 this one is on the published base and resolves. The only
+question is whether the spelling is intended.
+
+**Ask:** if it is a typo, correct it before adoption spreads, and say
+so loudly, because the fix is not backward compatible for anyone who
+already stored the old canonical.
+
+## What is right, and worth saying
+
+Not everything we checked is a defect, and two of these mattered to us:
+
+- `kps-acquisition-modality-cs` declares `content: complete`, declares
+  51 concepts and contains exactly 51. `ksp-investigation-cs` declares
+  2183 and contains 2183. Both are whole, both are on the published
+  base, and both are directly usable. Imaging and investigations can be
+  coded conformantly today, which is not true of substances and
+  medications (D2).
+- `kps-diagnostic-service-sections-vs` binds to HL7 `v2-0074` rather
+  than a republished Kenyan copy. Reusing the international code system
+  where Kenya has no reason to differ is the right call and saves
+  everyone a mapping.
+
 ## What we did on our side
 
 Vendored and pinned all four packages, extracted every binding and
 cardinality into a testable rule list, wired the official validator
 into CI, and fixed ten deviations of our own that this exercise
-surfaced, including two that wrongly rejected conformant patients. Our
-export now reports 7 errors, all of which trace to D1 and D2 above.
+surfaced, including two that wrongly rejected conformant patients. Our export is down from 16 errors to 6, and every one that remains
+traces to D2 above. Nothing outstanding is ours.
 
 We would be glad to contribute the extraction tooling or test bundles
 if they are useful to you.
